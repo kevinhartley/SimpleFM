@@ -347,12 +347,12 @@ class SynthViewController: UIViewController {
     @IBAction func holdModeToggled(sender: UIButton) {
         if sender.selected {
             sender.selected = false
-//            statusLabel.text = "Hold Mode Off"
+            statusLabel.text = "Hold Mode Off"
             holdMode = false
             turnOffHeldKeys()
         } else {
             sender.selected = true
-//            statusLabel.text = "Hold Mode On"
+            statusLabel.text = "Hold Mode On"
             holdMode = true
         }
     }
