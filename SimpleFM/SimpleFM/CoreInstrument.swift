@@ -113,11 +113,20 @@ class CoreInstrument: AKPolyphonicInstrument {
         }
     }
     
-    var vcoBalance: Double = 0.5 {
+    var vco1Balance: Double = 0.5 {
         didSet {
             for voice in voices {
                 let coreVoice = voice as! CoreVoice
-                coreVoice.vcoBalancer.balance = vcoBalance
+                coreVoice.vcoBalancer.balance = vco1Balance
+            }
+        }
+    }
+    
+    var vco2Balance: Double = 0.5 {
+        didSet {
+            for voice in voices {
+                let coreVoice = voice as! CoreVoice
+                coreVoice.vcoBalancer.balance = vco2Balance
             }
         }
     }
