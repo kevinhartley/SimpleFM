@@ -2,10 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "whitekey.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "whitekey@2x.png",
       "scale" : "2x"
     },
     {
