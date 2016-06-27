@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="Note" representedClassName=".Note" syncable="YES">
+        <attribute name="textBody" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="synth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="synth" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <entity name="Preset" representedClassName=".Preset" syncable="YES">
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="synth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Preset" inverseName="synth" inverseEntity="Preset" syncable="YES"/>
+    </entity>
+    <entity name="Synth" representedClassName=".Synth" syncable="YES">
+        <attribute name="attackValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="decayValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="delayValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="filterValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fmAmountValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fmModulationValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="oscillatorAmplitudeValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="oscillatorBlendValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="oscillatorName" attributeType="String" syncable="YES"/>
+        <attribute name="oscillatorValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="oscillatorWave" attributeType="String" syncable="YES"/>
+        <attribute name="releaseValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="reverbValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sustainValue" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Synth" inverseName="note" inverseEntity="Synth" syncable="YES"/>
+        <relationship name="preset" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Synth" inverseName="preset" inverseEntity="Synth" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Synth" positionX="-54" positionY="-0" width="128" height="285"/>
+        <element name="Preset" positionX="-54" positionY="-108" width="128" height="75"/>
+        <element name="Note" positionX="-29" positionY="99" width="128" height="75"/>
+    </elements>
+</model>

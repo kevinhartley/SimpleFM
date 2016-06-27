@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Synth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleFM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SynthViewController" customModule="SimpleFM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,18 +17,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rA5-Nz-3Uo">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2f-MP-Trl">
+                                <rect key="frame" x="477" y="526" width="81" height="234"/>
+                                <color key="backgroundColor" red="0.9274787303664922" green="0.91374010822417484" blue="0.86105137597655246" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="DEMO KEY">
+                                    <color key="titleColor" red="0.22241083119999999" green="0.22241083119999999" blue="0.22241083119999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oot-cv-Fkg" userLabel="VCO1 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="59" y="74" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-fm-x6H" userLabel="VCO2 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="59" y="290" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-nm-JpQ" userLabel="FM Amt Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="231" y="74" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-aB-TTJ" userLabel="FM Mod Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="231" y="290" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7d-Er-9iQ" userLabel="VCO1 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="402" y="74" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-D3-JzT" userLabel="VCO2 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="402" y="290" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSh-yY-R9z" userLabel="Reverb Amt Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="581" y="276" width="85" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFM-Sf-Ta7" userLabel="Reverb Mix Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="674" y="276" width="85" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-z8-FWS" userLabel="Delay Time Knob " customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="581" y="369" width="85" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-Ib-GiX" userLabel="Delay Mix Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="674" y="369" width="85" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uw-hb-lzo" userLabel="Cutoff Knob" customClass="KnobLarge" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="787" y="297" width="137" height="137"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xkr-4H-RCm" userLabel="Attack Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="599" y="74" width="48" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-sl-n6Z" userLabel="Decay Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="692" y="74" width="48" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-5N-79u" userLabel="Sustain Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="787" y="74" width="48" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-ts-PB4" userLabel="Release Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="881" y="74" width="48" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ld-rQ-CHe">
+                                <rect key="frame" x="31" y="658" width="156" height="30"/>
+                                <state key="normal" title="Octave Up"/>
+                                <connections>
+                                    <action selector="octaveUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0C-ZV-0uV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONz-65-Ks9">
+                                <rect key="frame" x="31" y="696" width="156" height="30"/>
+                                <state key="normal" title="Octave Down"/>
+                                <connections>
+                                    <action selector="octaveDownPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35b-wV-Krg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcs-Kz-V6e" userLabel="Hold Lbl">
+                                <rect key="frame" x="88" y="734" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="synth demo pic" translatesAutoresizingMaskIntoConstraints="NO" id="rA5-Nz-3Uo">
+                                <rect key="frame" x="-5" y="0.0" width="1034" height="773"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="attackSlider" destination="Xkr-4H-RCm" id="thc-MK-UVI"/>
+                        <outlet property="cutoffKnob" destination="1uw-hb-lzo" id="UgG-gB-4Kt"/>
+                        <outlet property="decaySlider" destination="mJL-sl-n6Z" id="FQC-fE-p7T"/>
+                        <outlet property="delayMixKnob" destination="6S4-Ib-GiX" id="DzM-oa-hwY"/>
+                        <outlet property="delayTimeKnob" destination="TDs-z8-FWS" id="an5-jL-jGH"/>
+                        <outlet property="fmMixKnob" destination="Vah-nm-JpQ" id="Sz3-EX-TxI"/>
+                        <outlet property="fmModKnob" destination="9iv-aB-TTJ" id="eIW-K0-EUH"/>
+                        <outlet property="octavePositionLabel" destination="hcs-Kz-V6e" id="0Pq-hN-f13"/>
+                        <outlet property="osc1SemitonesKnob" destination="oot-cv-Fkg" id="tb3-d3-G5J"/>
+                        <outlet property="osc2SemitonesKnob" destination="B4I-fm-x6H" id="hOB-iM-uBd"/>
+                        <outlet property="oscillator1VolKnob" destination="U7d-Er-9iQ" id="aya-cI-1Nv"/>
+                        <outlet property="oscillator2VolKnob" destination="6oG-D3-JzT" id="Mno-e5-RH4"/>
+                        <outlet property="releaseSlider" destination="9Oo-ts-PB4" id="0gA-oh-dzj"/>
+                        <outlet property="reverbAmtKnob" destination="tSh-yY-R9z" id="MJN-i2-wIT"/>
+                        <outlet property="reverbMixKnob" destination="iFM-Sf-Ta7" id="FTf-xF-1B6"/>
+                        <outlet property="sustainSlider" destination="9LC-5N-79u" id="cq9-lN-iNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="565" y="490"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="synth demo pic" width="704" height="528"/>
+    </resources>
 </document>
