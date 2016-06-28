@@ -15,7 +15,7 @@ protocol VerticalSliderDelegate {
 }
 
 @IBDesignable
-class VerticalSlider: UIControl {
+public class VerticalSlider: UIControl {
 
     var minValue: CGFloat = 0.0
     var maxValue: CGFloat = 1.0
@@ -43,7 +43,7 @@ class VerticalSlider: UIControl {
 
 // MARK: - Lifecycle
 extension VerticalSlider {
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         setupView()
     }
@@ -53,11 +53,11 @@ extension VerticalSlider {
         barLength = bounds.height - (barMargin * 2)
     }
 
-    override func drawRect(rect: CGRect) {
+    override public func drawRect(rect: CGRect) {
         VerticalSliderStyles.drawVerticalSlider(controlFrame: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height), knobRect: knobRect)
     }
 
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupView()
     }
@@ -79,14 +79,14 @@ extension VerticalSlider {
 
 // MARK: - Control Touch Handling
 extension VerticalSlider {
-    override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
+    override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
         if CGRectContainsPoint(knobRect, touch.locationInView(self)) {
             isSliding = true
         }
         return true
     }
 
-    override func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
+    override public func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
         let rawY = touch.locationInView(self).y
 
         if isSliding {
@@ -101,7 +101,7 @@ extension VerticalSlider {
         return true
     }
 
-    override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
+    override public func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         isSliding = false
     }
 }

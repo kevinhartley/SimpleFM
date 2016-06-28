@@ -16,8 +16,8 @@ public class SynthStyleKit: NSObject {
         let context = UIGraphicsGetCurrentContext()
 
         //// Image Declarations
-        let knob140_base = UIImage(named: "knob140_base.png")!
-        let knob140_indicator = UIImage(named: "knob140_indicator.png")!
+        let knob140_base = UIImage(named: "knob140_base")!
+//        let knob140_indicator = UIImage(named: "knob140_indicator")!
 
         //// Variable Declarations
         let knobAngle: CGFloat = -240 * knobValue
@@ -37,7 +37,7 @@ public class SynthStyleKit: NSObject {
         let indicatorPath = UIBezierPath(rect: CGRect(x: -35, y: -35, width: 70, height: 70))
         CGContextSaveGState(context)
         indicatorPath.addClip()
-        knob140_indicator.drawInRect(CGRectMake(-35, -35, knob140_indicator.size.width, knob140_indicator.size.height))
+//        knob140_indicator.drawInRect(CGRectMake(-35, -35, knob140_indicator.size.width, knob140_indicator.size.height))
         CGContextRestoreGState(context)
 
         CGContextRestoreGState(context)
@@ -49,7 +49,7 @@ public class SynthStyleKit: NSObject {
 
         //// Image Declarations
         let knob212_base = UIImage(named: "knob212_base.png")!
-        let knob212_indicator = UIImage(named: "knob212_indicator.png")!
+//        let knob212_indicator = UIImage(named: "knob212_indicator.png")!
 
         //// Variable Declarations
         let knobAngle: CGFloat = -240 * knobValue
@@ -69,7 +69,7 @@ public class SynthStyleKit: NSObject {
         let picture2Path = UIBezierPath(rect: CGRect(x: -53, y: -53, width: 106, height: 106))
         CGContextSaveGState(context)
         picture2Path.addClip()
-        knob212_indicator.drawInRect(CGRectMake(-53, -53, knob212_indicator.size.width, knob212_indicator.size.height))
+//        knob212_indicator.drawInRect(CGRectMake(-53, -53, knob212_indicator.size.width, knob212_indicator.size.height))
         CGContextRestoreGState(context)
 
         CGContextRestoreGState(context)
@@ -80,8 +80,8 @@ public class SynthStyleKit: NSObject {
         let context = UIGraphicsGetCurrentContext()
 
         //// Image Declarations
-        let knob120_base = UIImage(named: "knob120_base.png")!
-        let knob120_indicator = UIImage(named: "knob120_indicator.png")!
+        let knob120_base = UIImage(named: "knob120_base")!
+//        let knob120_indicator = UIImage(named: "knob120_indicator")!
 
         //// Variable Declarations
         let knobAngle: CGFloat = -240 * knobValue
@@ -101,7 +101,7 @@ public class SynthStyleKit: NSObject {
         let indicatorPath = UIBezierPath(rect: CGRect(x: -30, y: -30, width: 60, height: 60))
         CGContextSaveGState(context)
         indicatorPath.addClip()
-        knob120_indicator.drawInRect(CGRectMake(-30, -30, knob120_indicator.size.width, knob120_indicator.size.height))
+//        knob120_indicator.drawInRect(CGRectMake(-30, -30, knob120_indicator.size.width, knob120_indicator.size.height))
         CGContextRestoreGState(context)
 
         CGContextRestoreGState(context)

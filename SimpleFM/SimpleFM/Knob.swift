@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class Knob: UIView {
+public class Knob: UIView {
 
     var minimum = 0.0 {
         didSet {

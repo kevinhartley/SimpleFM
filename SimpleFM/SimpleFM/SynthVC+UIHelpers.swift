@@ -14,9 +14,9 @@ extension SynthViewController {
     // MARK: - Synth UI Helpers
     //*****************************************************************
 
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true
+//    }
 
 //    func openURL(url: String) {
 //        guard let url = NSURL(string: url) else {
@@ -55,9 +55,10 @@ extension SynthViewController {
 
         if type == 0 {
             segmentView.addOscWaveforms()
-        } else {
-            segmentView.addLfoWaveforms()
         }
+//        else {
+//            segmentView.addLfoWaveforms()
+//        }
 
         segmentView.delegate = self
         segmentView.tag = tag

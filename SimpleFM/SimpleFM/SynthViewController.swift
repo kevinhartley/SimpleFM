@@ -9,7 +9,7 @@
 import UIKit
 import AudioKit
 
-class SynthViewController: UIViewController {
+public class SynthViewController: UIViewController {
 
     // *********************************************************
     // MARK: - Instance Properties
@@ -95,7 +95,7 @@ class SynthViewController: UIViewController {
     // MARK: - viewDidLoad
     // *********************************************************
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // Create WaveformSegmentedViews
@@ -109,6 +109,9 @@ class SynthViewController: UIViewController {
         
         // Greeting
 //        statusLabel.text = String.randomGreeting()
+        
+        
+        view.backgroundColor = UIColor(patternImage: UIImage(named:"Synth Background")!)
     }
     
     // *********************************************************
@@ -701,16 +704,16 @@ extension SynthViewController: VerticalSliderDelegate {
 extension SynthViewController: SMSegmentViewDelegate {
     
     // SMSegment Delegate
-    func segmentView(segmentView: SMBasicSegmentView, didSelectSegmentAtIndex index: Int) {
+    public func segmentView(segmentView: SMBasicSegmentView, didSelectSegmentAtIndex index: Int) {
         
         switch (segmentView.tag) {
         case ControlTag.Vco1Waveform.rawValue:
             conductor.core.waveform1 = Double(index)
-            statusLabel.text = "VCO1 Waveform Changed"
+//            statusLabel.text = "VCO1 Waveform Changed"
             
         case ControlTag.Vco2Waveform.rawValue:
             conductor.core.waveform2 = Double(index)
-            statusLabel.text = "VCO2 Waveform Changed"
+//            statusLabel.text = "VCO2 Waveform Changed"
             
 //        case ControlTag.LfoWaveform.rawValue:
 //            statusLabel.text = "LFO Waveform Changed"

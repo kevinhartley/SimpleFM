@@ -17,8 +17,8 @@ public class VerticalSliderStyles: NSObject {
 
 
         //// Image Declarations
-        let slider_top = UIImage(named: "slider_top.png")!
-        let slider_track = UIImage(named: "slider_track.png")!
+        let slider_top = UIImage(named: "slider_top")!
+        let slider_track = UIImage(named: "slider_track")!
 
         //// Background Drawing
         let backgroundRect = CGRectMake(controlFrame.minX + 2, controlFrame.minY + 10, 38, 144)

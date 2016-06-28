@@ -10,7 +10,7 @@ import UIKit
 
 extension Knob {
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
             let touchPoint = touch.locationInView(self)
             lastX = touchPoint.x
@@ -18,7 +18,7 @@ extension Knob {
         }
     }
 
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
             let touchPoint = touch.locationInView(self)
             setPercentagesWithTouchPoint(touchPoint)
