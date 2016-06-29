@@ -2,10 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "wave_saw.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "wave_saw@2x.png",
       "scale" : "2x"
     },
     {
