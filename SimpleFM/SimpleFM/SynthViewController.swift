@@ -122,11 +122,11 @@ public class SynthViewController: UIViewController {
         
         // Set Preset Values
         conductor.masterVolume.volume = 25.0 // Master Volume
-        conductor.core.offset1 = 0 // VCO1 Semitones
-        conductor.core.offset2 = 0 // VCO2 Semitones
+        conductor.core.offset1 = 6 // VCO1 Semitones
+        conductor.core.offset2 = 6 // VCO2 Semitones
         /* conductor.core.detune = 0.0 */ // VCO2 Detune (Hz)
-        conductor.core.vco1Balance = 0.5 // VCO1/VCO2 Mix
-        conductor.core.vco2Balance = 0.5 // VCO1/VCO2 Mix
+        conductor.core.vcoBalance = 0.5 // VCO1/VCO2 Mix
+//        conductor.core.vco2Balance = 0.5 // VCO1/VCO2 Mix
         /* conductor.core.subOscMix = 0.0 */ // SubOsc Mix
         conductor.core.fmOscMix = 0.0 // FM Mix
         conductor.core.fmMod = 0.0 // FM Modulation Amt
@@ -191,8 +191,8 @@ public class SynthViewController: UIViewController {
 //        
 //        noiseMixKnob.value = conductor.core.noiseMix
         
-        oscillator1VolKnob.value = conductor.core.vco1Balance
-        oscillator2VolKnob.value = conductor.core.vco2Balance
+        oscillator1VolKnob.value = conductor.core.vcoBalance
+//        oscillator2VolKnob.value = conductor.core.vco2Balance
         
 //        lfoAmtKnob.maximum = 1200
 //        lfoAmtKnob.value = conductor.filterSection.lfoAmplitude
@@ -579,11 +579,11 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             
         case ControlTag.OscMix.rawValue:
 //            statusLabel.text = "OscMix: \(value.decimalString)"
-            conductor.core.vco1Balance = value
+            conductor.core.vcoBalance = value
             
-        case ControlTag.OscMix.rawValue:
-//            statusLabel.text = "OscMix: \(value.decimalString)"
-            conductor.core.vco2Balance = value
+//        case ControlTag.OscMix.rawValue:
+////            statusLabel.text = "OscMix: \(value.decimalString)"
+//            conductor.core.vco2Balance = value
             
 //        case ControlTag.Morph.rawValue:
 //            statusLabel.text = "Morph Waveform: \(value.decimalString)"

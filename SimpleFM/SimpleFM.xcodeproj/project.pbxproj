@@ -218,8 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				E23ADFB91D1DF59C00240D79 /* Conductor.swift */,
-				E23ADFBD1D1DF64600240D79 /* CoreVoice.swift */,
 				E23ADFBB1D1DF61F00240D79 /* CoreInstrument.swift */,
+				E23ADFBD1D1DF64600240D79 /* CoreVoice.swift */,
 			);
 			name = AudioSystem;
 			sourceTree = "<group>";

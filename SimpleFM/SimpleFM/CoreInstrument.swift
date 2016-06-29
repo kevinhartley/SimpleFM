@@ -113,23 +113,23 @@ class CoreInstrument: AKPolyphonicInstrument {
         }
     }
     
-    var vco1Balance: Double = 0.5 {
+    var vcoBalance: Double = 0.5 {
         didSet {
             for voice in voices {
                 let coreVoice = voice as! CoreVoice
-                coreVoice.vcoBalancer.balance = vco1Balance
+                coreVoice.vcoBalancer.balance = vcoBalance
             }
         }
     }
     
-    var vco2Balance: Double = 0.5 {
-        didSet {
-            for voice in voices {
-                let coreVoice = voice as! CoreVoice
-                coreVoice.vcoBalancer.balance = vco2Balance
-            }
-        }
-    }
+//    var vco2Balance: Double = 0.5 {
+//        didSet {
+//            for voice in voices {
+//                let coreVoice = voice as! CoreVoice
+//                coreVoice.vcoBalancer.balance = vco2Balance
+//            }
+//        }
+//    }
     
     var morph: Double = 0.0 {
         didSet {
