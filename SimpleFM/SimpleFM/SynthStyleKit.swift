@@ -48,7 +48,7 @@ public class SynthStyleKit: NSObject {
         let context = UIGraphicsGetCurrentContext()
 
         //// Image Declarations
-        let knob212_base = UIImage(named: "knob212_base.png")!
+        let knob212_base = UIImage(named: "knob212_base")!
 //        let knob212_indicator = UIImage(named: "knob212_indicator.png")!
 
         //// Variable Declarations

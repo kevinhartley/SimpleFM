@@ -2,16 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Simple FM Slider.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Simple FM Slider-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Simple FM Slider.png",
       "scale" : "3x"
     }
   ],

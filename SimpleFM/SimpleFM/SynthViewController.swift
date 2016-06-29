@@ -314,6 +314,7 @@ public class SynthViewController: UIViewController {
     @IBAction func stereoFattenToggled(sender: UIButton) {
         if sender.selected {
             sender.selected = false
+            
 //            statusLabel.text = "Stereo Fatten Off"
             conductor.fatten.dryWetMix.balance = 0
         } else {
@@ -338,7 +339,7 @@ public class SynthViewController: UIViewController {
     
     @IBAction func octaveUpPressed(sender: UIButton) {
         guard keyboardOctavePosition < 3 else {
-            statusLabel.text = "Captain, she can't go any higher!"
+//            statusLabel.text = "Captain, she can't go any higher!"
             return
         }
         
@@ -350,12 +351,12 @@ public class SynthViewController: UIViewController {
     @IBAction func holdModeToggled(sender: UIButton) {
         if sender.selected {
             sender.selected = false
-            statusLabel.text = "Hold Mode Off"
+//            statusLabel.text = "Hold Mode Off"
             holdMode = false
             turnOffHeldKeys()
         } else {
             sender.selected = true
-            statusLabel.text = "Hold Mode On"
+//            statusLabel.text = "Hold Mode On"
             holdMode = true
         }
     }
@@ -376,7 +377,7 @@ public class SynthViewController: UIViewController {
     // Universal
     @IBAction func midiPanicPressed(sender: RoundedButton) {
         turnOffHeldKeys()
-        statusLabel.text = "All Notes Off"
+//        statusLabel.text = "All Notes Off"
     }
     
 //    @IBAction func displayModeToggled(sender: UIButton) {
@@ -454,13 +455,13 @@ public class SynthViewController: UIViewController {
     func turnOnKey(key: UIButton) {
         updateKeyToDownPosition(key)
         let midiNote = midiNoteFromTag(key.tag)
-        statusLabel.text = "Key Pressed: \(noteNameFromMidiNote(midiNote))"
+//        statusLabel.text = "Key Pressed: \(noteNameFromMidiNote(midiNote))"
         conductor.core.playNote(midiNote, velocity: 127)
     }
     
     func turnOffKey(key: UIButton) {
         updateKeyToUpPosition(key)
-        statusLabel.text = "Key Released"
+//        statusLabel.text = "Key Released"
         conductor.core.stopNote(midiNoteFromTag(key.tag))
     }
     
@@ -488,7 +489,7 @@ public class SynthViewController: UIViewController {
         // Determine new keyboard bounds
         let lowerMidiNote = 48  + (keyboardOctavePosition * 12)
         let upperMidiNote = lowerMidiNote + 24
-        statusLabel.text = "Keyboard Range: \(noteNameFromMidiNote(lowerMidiNote)) to \(noteNameFromMidiNote(upperMidiNote))"
+//        statusLabel.text = "Keyboard Range: \(noteNameFromMidiNote(lowerMidiNote)) to \(noteNameFromMidiNote(upperMidiNote))"
         
         guard !monoMode else {
             turnOffHeldKeys()
@@ -564,12 +565,12 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
         // VCOs
         case ControlTag.Vco1Semitones.rawValue:
             let intValue = Int(floor(value))
-            statusLabel.text = "Semitones: \(intValue)"
+//            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset1 = intValue
             
         case ControlTag.Vco2Semitones.rawValue:
             let intValue = Int(floor(value))
-            statusLabel.text = "Semitones: \(intValue)"
+//            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset2 = intValue
             
 //        case ControlTag.Vco2Detune.rawValue:
@@ -577,11 +578,11 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
 //            conductor.core.detune = value
             
         case ControlTag.OscMix.rawValue:
-            statusLabel.text = "OscMix: \(value.decimalString)"
+//            statusLabel.text = "OscMix: \(value.decimalString)"
             conductor.core.vco1Balance = value
             
         case ControlTag.OscMix.rawValue:
-            statusLabel.text = "OscMix: \(value.decimalString)"
+//            statusLabel.text = "OscMix: \(value.decimalString)"
             conductor.core.vco2Balance = value
             
 //        case ControlTag.Morph.rawValue:
@@ -594,11 +595,11 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
 //            conductor.core.subOscMix = value
             
         case ControlTag.FmMix.rawValue:
-            statusLabel.text = "FM Amt: \(fmMixKnob.knobValue.percentageString)"
+//            statusLabel.text = "FM Amt: \(fmMixKnob.knobValue.percentageString)"
             conductor.core.fmOscMix = value
             
         case ControlTag.FmMod.rawValue:
-            statusLabel.text = "FM Mod: \(fmModKnob.knobValue.percentageString)"
+//            statusLabel.text = "FM Mod: \(fmModKnob.knobValue.percentageString)"
             conductor.core.fmMod = value
             
 //        case ControlTag.NoiseMix.rawValue:
@@ -617,7 +618,7 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
         // Filter
         case ControlTag.Cutoff.rawValue:
             let cutOffFrequency = cutoffFreqFromValue(value)
-            statusLabel.text = "Cutoff: \(cutOffFrequency.decimalString) Hz"
+//            statusLabel.text = "Cutoff: \(cutOffFrequency.decimalString) Hz"
             conductor.filterSection.cutoffFrequency = cutOffFrequency
             
 //        case ControlTag.Rez.rawValue:
@@ -632,11 +633,11 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             
         // Delay
         case ControlTag.DelayTime.rawValue:
-            statusLabel.text = "Delay Time: \(value.decimal1000String) ms"
+//            statusLabel.text = "Delay Time: \(value.decimal1000String) ms"
             conductor.multiDelay.time = value
             
         case ControlTag.DelayMix.rawValue:
-            statusLabel.text = "Delay Mix: \(value.decimalString)"
+//            statusLabel.text = "Delay Mix: \(value.decimalString)"
             conductor.multiDelay.mix = value
             
         // Reverb
@@ -644,21 +645,21 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             if value == 0.99 {
                 statusLabel.text = "Reverb Size: Grand Canyon!"
             } else {
-                statusLabel.text = "Reverb Size: \(reverbAmtKnob.knobValue.percentageString)"
+//                statusLabel.text = "Reverb Size: \(reverbAmtKnob.knobValue.percentageString)"
             }
             conductor.reverb.feedback = value
             
         case ControlTag.ReverbMix.rawValue:
-            statusLabel.text = "Reverb Mix: \(value.decimalString)"
+//            statusLabel.text = "Reverb Mix: \(value.decimalString)"
             conductor.reverbMixer.balance = value
             
         // Master
         case ControlTag.MasterVol.rawValue:
-            statusLabel.text = "Oscillator 1 Vol: \(oscillator1VolKnob.knobValue.percentageString)"
+//            statusLabel.text = "Oscillator 1 Vol: \(oscillator1VolKnob.knobValue.percentageString)"
             conductor.masterVolume.volume = value
             
         case ControlTag.MasterVol.rawValue:
-            statusLabel.text = "Oscillator 2 Vol: \(oscillator2VolKnob.knobValue.percentageString)"
+//            statusLabel.text = "Oscillator 2 Vol: \(oscillator2VolKnob.knobValue.percentageString)"
             conductor.masterVolume.volume = value
             
         default:
@@ -676,19 +677,19 @@ extension SynthViewController: VerticalSliderDelegate {
         
         switch (tag) {
         case ControlTag.adsrAttack.rawValue:
-            statusLabel.text = "Attack: \(attackSlider.sliderValue.percentageString)"
+//            statusLabel.text = "Attack: \(attackSlider.sliderValue.percentageString)"
             conductor.core.attackDuration = value
             
         case ControlTag.adsrDecay.rawValue:
-            statusLabel.text = "Decay: \(decaySlider.sliderValue.percentageString)"
+//            statusLabel.text = "Decay: \(decaySlider.sliderValue.percentageString)"
             conductor.core.decayDuration = value
             
         case ControlTag.adsrSustain.rawValue:
-            statusLabel.text = "Sustain: \(sustainSlider.sliderValue.percentageString)"
+//            statusLabel.text = "Sustain: \(sustainSlider.sliderValue.percentageString)"
             conductor.core.sustainLevel = value
             
         case ControlTag.adsrRelease.rawValue:
-            statusLabel.text = "Release: \(releaseSlider.sliderValue.percentageString)"
+//            statusLabel.text = "Release: \(releaseSlider.sliderValue.percentageString)"
             conductor.core.releaseDuration = value
             
         default:

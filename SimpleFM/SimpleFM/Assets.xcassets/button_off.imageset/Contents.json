@@ -2,10 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "RED_SWITCH_OFF.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "RED_SWITCH_OFF-1.png",
       "scale" : "2x"
     },
     {
