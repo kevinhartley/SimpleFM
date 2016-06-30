@@ -17,7 +17,7 @@ public class SynthViewController: UIViewController {
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var octavePositionLabel: UILabel!
-//    @IBOutlet weak var oscMixKnob: KnobMedium!
+    @IBOutlet weak var oscMixKnob: KnobMedium!
     @IBOutlet weak var osc1SemitonesKnob: KnobMedium!
     @IBOutlet weak var osc2SemitonesKnob: KnobMedium!
 //    @IBOutlet weak var osc2DetuneKnob: KnobMedium!
@@ -43,10 +43,10 @@ public class SynthViewController: UIViewController {
     @IBOutlet weak var releaseSlider: VerticalSlider!
     @IBOutlet weak var vco1Toggle: UIButton!
     @IBOutlet weak var vco2Toggle: UIButton!
-//    @IBOutlet weak var bitcrushToggle: UIButton!
-//    @IBOutlet weak var filterToggle: UIButton! 
-//    @IBOutlet weak var delayToggle: UIButton!
-//    @IBOutlet weak var reverbToggle: UIButton!
+//    @IBOutlet weak var bitcrushToggle: UIButton! 
+    @IBOutlet weak var filterToggle: UIButton!
+    @IBOutlet weak var delayToggle: UIButton!
+    @IBOutlet weak var reverbToggle: UIButton!
     @IBOutlet weak var fattenToggle: UIButton!
     @IBOutlet weak var holdToggle: UIButton!
 //    @IBOutlet weak var monoToggle: UIButton!
@@ -154,14 +154,14 @@ public class SynthViewController: UIViewController {
         setupKnobValues()
         setupSliderValues()
         
-        // Update Toggle Presets
+//         Update Toggle Presets
 //        displayModeToggled(plotToggle)
         
-//        vco1Toggled(vco1Toggle)
-//        vco2Toggled(vco2Toggle)
-//        filterToggled(filterToggle)
-//        delayToggled(delayToggle)
-//        reverbToggled(reverbToggle)
+        vco1Toggled(/*vco1Toggle*/)
+        vco2Toggled(/*vco2Toggle*/)
+        filterToggled(/*filterToggle*/)
+        delayToggled(/*delayToggle*/)
+        reverbToggled(/*reverbToggle*/)
     }
     
     func setupKnobValues() {
@@ -239,7 +239,7 @@ public class SynthViewController: UIViewController {
     // MARK: - IBActions
     //*****************************************************************
     
-//    @IBAction func vco1Toggled(sender: UIButton) {
+    func vco1Toggled () /*(sender: UIButton)*/ {
 //        if sender.selected {
 //            sender.selected = false
 //            statusLabel.text = "VCO 1 Off"
@@ -247,11 +247,11 @@ public class SynthViewController: UIViewController {
 //        } else {
 //            sender.selected = true
 //            statusLabel.text = "VCO 1 On"
-//            conductor.core.vco1On = true
+            conductor.core.vco1On = true
 //        }
-//    }
+    }
     
-//    @IBAction func vco2Toggled(sender: UIButton) {
+    func vco2Toggled() /*(sender: UIButton)*/ {
 //        if sender.selected {
 //            sender.selected = false
 //            statusLabel.text = "VCO 2 Off"
@@ -259,9 +259,9 @@ public class SynthViewController: UIViewController {
 //        } else {
 //            sender.selected = true
 //            statusLabel.text = "VCO 2 On"
-//            conductor.core.vco2On = true
+            conductor.core.vco2On = true
 //        }
-//    }
+    }
     
 //    @IBAction func crusherToggled(sender: UIButton) {
 //        if sender.selected {
@@ -275,7 +275,7 @@ public class SynthViewController: UIViewController {
 //        }
 //    }
     
-//    @IBAction func filterToggled(sender: UIButton) {
+    func filterToggled(/*sender: UIButton*/) {
 //        if sender.selected {
 //            sender.selected = false
 //            statusLabel.text = "Filter Off"
@@ -283,11 +283,11 @@ public class SynthViewController: UIViewController {
 //        } else {
 //            sender.selected = true
 //            statusLabel.text = "Filter On"
-//            conductor.filterSection.output.start()
+            conductor.filterSection.output.start()
 //        }
-//    }
+    }
     
-//    @IBAction func delayToggled(sender: UIButton) {
+    func delayToggled(/*sender: UIButton*/) {
 //        if sender.selected {
 //            sender.selected = false
 //            statusLabel.text = "Delay Off"
@@ -295,11 +295,11 @@ public class SynthViewController: UIViewController {
 //        } else {
 //            sender.selected = true
 //            statusLabel.text = "Delay On"
-//            conductor.multiDelayMixer.balance = 1
+            conductor.multiDelayMixer.balance = 1
 //        }
-//    }
+    }
     
-//    @IBAction func reverbToggled(sender: UIButton) {
+    func reverbToggled(/*sender: UIButton*/) {
 //        if sender.selected {
 //            sender.selected = false
 //            statusLabel.text = "Reverb Off"
@@ -307,9 +307,9 @@ public class SynthViewController: UIViewController {
 //        } else {
 //            sender.selected = true
 //            statusLabel.text = "Reverb On"
-//            conductor.reverb.start()
+            conductor.reverb.start()
 //        }
-//    }
+    }
     
     @IBAction func stereoFattenToggled(sender: UIButton) {
         if sender.selected {
@@ -375,10 +375,10 @@ public class SynthViewController: UIViewController {
 //    }
     
     // Universal
-    @IBAction func midiPanicPressed(sender: RoundedButton) {
-        turnOffHeldKeys()
+//    @IBAction func midiPanicPressed(sender: RoundedButton) {
+//        turnOffHeldKeys()
 //        statusLabel.text = "All Notes Off"
-    }
+//    }
     
 //    @IBAction func displayModeToggled(sender: UIButton) {
 //        if sender.selected {
@@ -579,7 +579,7 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             
         case ControlTag.OscMix.rawValue:
 //            statusLabel.text = "OscMix: \(value.decimalString)"
-            conductor.core.vcoBalance = value
+            conductor.core.vcoBalance = 0.50 //<-- i added 0.50, was --> value
             
 //        case ControlTag.OscMix.rawValue:
 ////            statusLabel.text = "OscMix: \(value.decimalString)"
@@ -645,7 +645,7 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             if value == 0.99 {
                 statusLabel.text = "Reverb Size: Grand Canyon!"
             } else {
-//                statusLabel.text = "Reverb Size: \(reverbAmtKnob.knobValue.percentageString)"
+                statusLabel.text = "Reverb Size: \(reverbAmtKnob.knobValue.percentageString)"
             }
             conductor.reverb.feedback = value
             

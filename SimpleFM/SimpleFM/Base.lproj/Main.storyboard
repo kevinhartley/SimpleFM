@@ -27,13 +27,13 @@
                                                 <rect key="frame" x="0.0" y="40" width="532" height="180"/>
                                                 <subviews>
                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oot-cv-Fkg" userLabel="VCO1 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="180"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-nm-JpQ" userLabel="FM Amt Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="187.5" y="0.0" width="157" height="180"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="180"/>
                                                     </view>
                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7d-Er-9iQ" userLabel="VCO1 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="374.5" y="0.0" width="157.5" height="180"/>
+                                                        <rect key="frame" x="188" y="0.0" width="157" height="180"/>
+                                                    </view>
+                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-nm-JpQ" userLabel="FM Amt Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                                        <rect key="frame" x="375" y="0.0" width="158" height="180"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -69,7 +69,7 @@
                                                 </variation>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MX7-Bp-oav">
-                                                <rect key="frame" x="924" y="220" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="924" y="170" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" id="UCF-iI-08F"/>
@@ -81,10 +81,10 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wg-VQ-UaS">
-                                        <rect key="frame" x="0.0" y="220" width="924" height="23"/>
+                                        <rect key="frame" x="0.0" y="220" width="924" height="19"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="CeW-ng-EL2" userLabel="2">
-                                        <rect key="frame" x="0.0" y="243" width="924" height="220"/>
+                                        <rect key="frame" x="0.0" y="239" width="924" height="220"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-CF-zX0" userLabel="Osc2/FM Mod/Volume">
                                                 <rect key="frame" x="0.0" y="20" width="534" height="180"/>
@@ -92,10 +92,10 @@
                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-fm-x6H" userLabel="VCO2 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="158" height="180"/>
                                                     </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-aB-TTJ" userLabel="FM Mod Knob" customClass="KnobMedium" customModule="SimpleFM">
+                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-D3-JzT" userLabel="VCO2 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
                                                         <rect key="frame" x="188" y="0.0" width="158" height="180"/>
                                                     </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-D3-JzT" userLabel="VCO2 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-aB-TTJ" userLabel="FM Mod Knob" customClass="KnobMedium" customModule="SimpleFM">
                                                         <rect key="frame" x="376" y="0.0" width="158" height="180"/>
                                                     </view>
                                                 </subviews>
@@ -162,7 +162,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cL0-WR-KGa">
-                                                <rect key="frame" x="904" y="110" width="20" height="0.0"/>
+                                                <rect key="frame" x="904" y="85" width="20" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="uLb-G9-7Oa"/>
                                                 </constraints>
@@ -173,22 +173,22 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oS0-dr-4gJ" userLabel="Spacer">
-                                        <rect key="frame" x="0.0" y="463" width="924" height="10"/>
+                                        <rect key="frame" x="0.0" y="459" width="924" height="10"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="ihD-Uq-fpu"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="560" translatesAutoresizingMaskIntoConstraints="NO" id="FA8-JF-HxO" userLabel="3">
-                                        <rect key="frame" x="0.0" y="473" width="924" height="45"/>
+                                        <rect key="frame" x="0.0" y="469" width="924" height="45"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="3Nu-M4-BNL" userLabel="Octave">
-                                                <rect key="frame" x="0.0" y="4" width="109" height="38"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3Nu-M4-BNL" userLabel="Octave">
+                                                <rect key="frame" x="0.0" y="4" width="138" height="38"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONz-65-Ks9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="38"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="38"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="RIJ-mg-Xdi"/>
+                                                            <constraint firstAttribute="width" constant="45" id="RIJ-mg-Xdi"/>
                                                         </constraints>
                                                         <state key="normal" image="button_left"/>
                                                         <connections>
@@ -196,9 +196,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ld-rQ-CHe">
-                                                        <rect key="frame" x="61" y="0.0" width="7" height="38"/>
+                                                        <rect key="frame" x="54" y="0.0" width="45" height="38"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="rjW-Nx-C65"/>
+                                                            <constraint firstAttribute="width" constant="45" id="rjW-Nx-C65"/>
                                                         </constraints>
                                                         <state key="normal" image="button_right"/>
                                                         <connections>
@@ -206,7 +206,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcs-Kz-V6e" userLabel="Hold Lbl">
-                                                        <rect key="frame" x="79" y="0.0" width="30" height="38"/>
+                                                        <rect key="frame" x="108" y="0.0" width="30" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="n4Z-a7-a2r"/>
                                                         </constraints>
@@ -216,11 +216,14 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-ow-2n9" userLabel="Switches">
-                                                <rect key="frame" x="709" y="0.0" width="215" height="45"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-ow-2n9" userLabel="Switches">
+                                                <rect key="frame" x="698" y="0.0" width="226" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycX-CL-ftN" userLabel="Hold Toggle">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="6I9-Hu-AVG"/>
+                                                        </constraints>
                                                         <state key="normal" title="Hold" image="roundbtn_off"/>
                                                         <state key="selected" image="roundbtn_on"/>
                                                         <connections>
@@ -228,7 +231,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzF-9F-Axd" userLabel="Fatten Toggle">
-                                                        <rect key="frame" x="85" y="0.0" width="45" height="45"/>
+                                                        <rect key="frame" x="105" y="0.0" width="61" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="Nsy-My-GB1"/>
                                                             <constraint firstAttribute="height" constant="45" id="QbU-Os-mTh"/>
@@ -240,28 +243,27 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sp-4p-ERa">
-                                                        <rect key="frame" x="170" y="0.0" width="10" height="45"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <rect key="frame" x="226" y="0.0" width="0.0" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="15" id="3eN-Dh-erN"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="9sp-4p-ERa" secondAttribute="trailing" constant="35" id="bPB-Hm-3hB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9sp-4p-ERa" secondAttribute="trailing" constant="15" id="bPB-Hm-3hB"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-DG-7EO" userLabel="Spacer">
-                                        <rect key="frame" x="0.0" y="518" width="924" height="10"/>
+                                        <rect key="frame" x="0.0" y="514" width="924" height="10"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="UxR-oB-DEE"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QWD-3F-707" userLabel="Keys">
-                                        <rect key="frame" x="0.0" y="528" width="924" height="190"/>
+                                        <rect key="frame" x="0.0" y="524" width="924" height="194"/>
                                         <subviews>
                                             <button opaque="NO" tag="248" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-cc-XC6" userLabel="C">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="184"/>
@@ -328,7 +330,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="254" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dww-7a-nd8" userLabel="F#">
-                                                <rect key="frame" x="222" y="0.0" width="36.5" height="116"/>
+                                                <rect key="frame" x="222" y="0.0" width="37" height="116"/>
                                                 <state key="normal" image="blackkey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -339,7 +341,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="255" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoI-gd-a6w" userLabel="G">
-                                                <rect key="frame" x="258.5" y="0.0" width="37" height="184"/>
+                                                <rect key="frame" x="259" y="0.0" width="37" height="184"/>
                                                 <state key="normal" image="whitekey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -350,7 +352,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="256" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGS-xX-Pwo" userLabel="G#">
-                                                <rect key="frame" x="295.5" y="0.0" width="37" height="116"/>
+                                                <rect key="frame" x="296" y="0.0" width="37" height="116"/>
                                                 <state key="normal" image="blackkey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -361,7 +363,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="257" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-pv-Yoy" userLabel="A">
-                                                <rect key="frame" x="332.5" y="0.0" width="37" height="184"/>
+                                                <rect key="frame" x="333" y="0.0" width="37" height="184"/>
                                                 <state key="normal" image="whitekey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -372,7 +374,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="258" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-Ze-7y6" userLabel="A#">
-                                                <rect key="frame" x="369.5" y="0.0" width="37" height="116"/>
+                                                <rect key="frame" x="370" y="0.0" width="37" height="116"/>
                                                 <state key="normal" image="blackkey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -383,7 +385,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="259" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqi-rM-mom" userLabel="B">
-                                                <rect key="frame" x="406.5" y="0.0" width="37" height="184"/>
+                                                <rect key="frame" x="407" y="0.0" width="37" height="184"/>
                                                 <state key="normal" image="whitekey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -394,7 +396,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="260" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VU-Wd-At9" userLabel="C2">
-                                                <rect key="frame" x="443.5" y="0.0" width="37" height="184"/>
+                                                <rect key="frame" x="444" y="0.0" width="37" height="184"/>
                                                 <state key="normal" image="whitekey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -405,7 +407,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="261" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c24-O7-zR9" userLabel="C2#">
-                                                <rect key="frame" x="480.5" y="0.0" width="37" height="116"/>
+                                                <rect key="frame" x="481" y="0.0" width="37" height="116"/>
                                                 <state key="normal" image="blackkey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -416,7 +418,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="262" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Go-gN-cIv" userLabel="D2">
-                                                <rect key="frame" x="517.5" y="0.0" width="37" height="184"/>
+                                                <rect key="frame" x="518" y="0.0" width="37" height="184"/>
                                                 <state key="normal" image="whitekey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -427,7 +429,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="263" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-QU-sgk" userLabel="D2#">
-                                                <rect key="frame" x="554.5" y="0.0" width="37" height="116"/>
+                                                <rect key="frame" x="555" y="0.0" width="37" height="116"/>
                                                 <state key="normal" image="blackkey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -438,7 +440,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="264" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfm-1x-Pkt" userLabel="E2">
-                                                <rect key="frame" x="591.5" y="0.0" width="37" height="184"/>
+                                                <rect key="frame" x="592" y="0.0" width="37" height="184"/>
                                                 <state key="normal" image="whitekey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -449,7 +451,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="265" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWN-5W-61A" userLabel="F2">
-                                                <rect key="frame" x="628.5" y="0.0" width="37" height="184"/>
+                                                <rect key="frame" x="629" y="0.0" width="37" height="184"/>
                                                 <state key="normal" image="whitekey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -460,7 +462,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="266" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3I-AY-6y3" userLabel="F2#">
-                                                <rect key="frame" x="665.5" y="0.0" width="36.5" height="116"/>
+                                                <rect key="frame" x="666" y="0.0" width="37" height="116"/>
                                                 <state key="normal" image="blackkey">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -538,7 +540,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="190" id="xa4-UI-e6u"/>
+                                            <constraint firstAttribute="height" constant="194" id="xa4-UI-e6u"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>

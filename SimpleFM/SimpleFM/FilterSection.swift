@@ -18,12 +18,12 @@ class FilterSection: AKNode {
         }
     }
     
-//    var resonance: Double = 0.9 {
-//        didSet {
-//            parameters[1] = resonance
-//            output.parameters = parameters
-//        }
-//    }
+    var resonance: Double = 0.9 {
+        didSet {
+            parameters[1] = resonance
+            output.parameters = parameters
+        }
+    }
     
 //    var lfoAmplitude: Double = 1000 {
 //        didSet {

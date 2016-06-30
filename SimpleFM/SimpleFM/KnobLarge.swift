@@ -15,10 +15,10 @@ protocol KnobLargeDelegate {
 @IBDesignable
 class KnobLarge: Knob {
 
-    var delegate: KnobLargeDelegate?
+    var delegate: KnobMediumDelegate?
 
     override func drawRect(rect: CGRect) {
-        SynthStyleKit.drawKnobLarge(knobValue: knobValue)
+        SynthStyleKit.drawKnobMedium(knobValue: knobValue)
     }
 
     // MARK: - Set Percentages

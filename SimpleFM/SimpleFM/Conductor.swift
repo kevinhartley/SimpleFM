@@ -44,7 +44,7 @@ class Conductor: AKMIDIListener {
         reverbMixer = AKDryWetMixer(masterVolume, reverb, balance: 0.0)
         
         // uncomment this to allow background operation
-        // AKSettings.playbackWhileMuted = true
+//         AKSettings.playbackWhileMuted = true
         
         AudioKit.output = reverbMixer
         AudioKit.start()
