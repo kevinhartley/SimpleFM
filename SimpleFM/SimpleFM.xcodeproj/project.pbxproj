@@ -12,7 +12,6 @@
 		E23ADEFA1D19F36500240D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23ADEF81D19F36500240D79 /* Main.storyboard */; };
 		E23ADEFC1D19F36500240D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23ADEFB1D19F36500240D79 /* Assets.xcassets */; };
 		E23ADEFF1D19F36500240D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23ADEFD1D19F36500240D79 /* LaunchScreen.storyboard */; };
-		E23ADF9F1D1DEB8A00240D79 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23ADF9E1D1DEB8A00240D79 /* AudioKit.framework */; };
 		E23ADFA61D1DF40A00240D79 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFA01D1DF40A00240D79 /* Note+CoreDataProperties.swift */; };
 		E23ADFA71D1DF40A00240D79 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFA11D1DF40A00240D79 /* Note.swift */; };
 		E23ADFA81D1DF40A00240D79 /* Synth+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFA21D1DF40A00240D79 /* Synth+CoreDataProperties.swift */; };
@@ -51,8 +50,9 @@
 		E23ADFF51D1F5EBA00240D79 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF41D1F5EBA00240D79 /* Double+Extensions.swift */; };
 		E23ADFF71D1F5F0C00240D79 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF61D1F5F0C00240D79 /* VerticalSlider.swift */; };
 		E23ADFFA1D1F5F3E00240D79 /* VerticalSliderStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF91D1F5F3E00240D79 /* VerticalSliderStyles.swift */; };
-		E2487BAE1D22DA0C00018399 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2487BAD1D22DA0C00018399 /* AudioKit.framework */; };
-		E2487BAF1D22DA0C00018399 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2487BAD1D22DA0C00018399 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2F0FDCB1D25DF1900F04297 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCA1D25DF1900F04297 /* AudioKit.framework */; };
+		E2F0FDCD1D25DF2700F04297 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */; };
+		E2F0FDCE1D25DF2700F04297 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,7 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E2487BAF1D22DA0C00018399 /* AudioKit.framework in Embed Frameworks */,
+				E2F0FDCE1D25DF2700F04297 /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +77,6 @@
 		E23ADEFB1D19F36500240D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E23ADEFE1D19F36500240D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E23ADF001D19F36500240D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E23ADF9E1D1DEB8A00240D79 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		E23ADFA01D1DF40A00240D79 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E23ADFA11D1DF40A00240D79 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		E23ADFA21D1DF40A00240D79 /* Synth+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Synth+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -116,7 +115,8 @@
 		E23ADFF41D1F5EBA00240D79 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		E23ADFF61D1F5F0C00240D79 /* VerticalSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		E23ADFF91D1F5F3E00240D79 /* VerticalSliderStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSliderStyles.swift; sourceTree = "<group>"; };
-		E2487BAD1D22DA0C00018399 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		E2F0FDCA1D25DF1900F04297 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../../../../../AudioKit-iOS/Examples/AnalogSynthX/AudioKit.framework"; sourceTree = "<group>"; };
+		E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../../../../AudioKit-iOS/Examples/AnalogSynthX/AudioKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2487BAE1D22DA0C00018399 /* AudioKit.framework in Frameworks */,
-				E23ADF9F1D1DEB8A00240D79 /* AudioKit.framework in Frameworks */,
+				E2F0FDCD1D25DF2700F04297 /* AudioKit.framework in Frameworks */,
+				E2F0FDCB1D25DF1900F04297 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 		E23ADEE81D19F36500240D79 = {
 			isa = PBXGroup;
 			children = (
-				E2487BAD1D22DA0C00018399 /* AudioKit.framework */,
+				E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */,
 				E23ADEF31D19F36500240D79 /* SimpleFM */,
 				E23ADEF21D19F36500240D79 /* Products */,
 			);
@@ -152,6 +152,7 @@
 		E23ADEF31D19F36500240D79 /* SimpleFM */ = {
 			isa = PBXGroup;
 			children = (
+				E2F0FDCA1D25DF1900F04297 /* AudioKit.framework */,
 				E23ADEF41D19F36500240D79 /* AppDelegate.swift */,
 				E23ADEF81D19F36500240D79 /* Main.storyboard */,
 				E23ADFC41D1E3FB100240D79 /* AudioSystem */,
@@ -164,7 +165,6 @@
 				E23ADFF31D1F5EAC00240D79 /* Extensions */,
 				E23ADFE81D1F5E2500240D79 /* SMSegmentedView */,
 				E23ADEFD1D19F36500240D79 /* LaunchScreen.storyboard */,
-				E23ADF9E1D1DEB8A00240D79 /* AudioKit.framework */,
 				E23ADF001D19F36500240D79 /* Info.plist */,
 			);
 			path = SimpleFM;
@@ -537,6 +537,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleFM",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SimpleFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -555,6 +556,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleFM",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SimpleFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

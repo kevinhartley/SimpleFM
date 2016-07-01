@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/AudioKit"]
+	path = SimpleFM/Carthage/Checkouts/AudioKit
+	url = https://github.com/audiokit/AudioKit.git

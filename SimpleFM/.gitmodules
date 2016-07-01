@@ -1,0 +1,2 @@
+[submodule "Carthage/Checkouts/AudioKit"]
+	url = https://github.com/audiokit/AudioKit.git
