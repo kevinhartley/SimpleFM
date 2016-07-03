@@ -50,9 +50,8 @@
 		E23ADFF51D1F5EBA00240D79 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF41D1F5EBA00240D79 /* Double+Extensions.swift */; };
 		E23ADFF71D1F5F0C00240D79 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF61D1F5F0C00240D79 /* VerticalSlider.swift */; };
 		E23ADFFA1D1F5F3E00240D79 /* VerticalSliderStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF91D1F5F3E00240D79 /* VerticalSliderStyles.swift */; };
-		E2F0FDCB1D25DF1900F04297 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCA1D25DF1900F04297 /* AudioKit.framework */; };
-		E2F0FDCD1D25DF2700F04297 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */; };
-		E2F0FDCE1D25DF2700F04297 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2F0FDD11D27315C00F04297 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCF1D27315100F04297 /* AudioKit.framework */; };
+		E2F0FDD21D27315C00F04297 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCF1D27315100F04297 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E2F0FDCE1D25DF2700F04297 /* AudioKit.framework in Embed Frameworks */,
+				E2F0FDD21D27315C00F04297 /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,8 +114,7 @@
 		E23ADFF41D1F5EBA00240D79 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		E23ADFF61D1F5F0C00240D79 /* VerticalSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		E23ADFF91D1F5F3E00240D79 /* VerticalSliderStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSliderStyles.swift; sourceTree = "<group>"; };
-		E2F0FDCA1D25DF1900F04297 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../../../../../AudioKit-iOS/Examples/AnalogSynthX/AudioKit.framework"; sourceTree = "<group>"; };
-		E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../../../../AudioKit-iOS/Examples/AnalogSynthX/AudioKit.framework"; sourceTree = "<group>"; };
+		E2F0FDCF1D27315100F04297 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F0FDCD1D25DF2700F04297 /* AudioKit.framework in Frameworks */,
-				E2F0FDCB1D25DF1900F04297 /* AudioKit.framework in Frameworks */,
+				E2F0FDD11D27315C00F04297 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +132,7 @@
 		E23ADEE81D19F36500240D79 = {
 			isa = PBXGroup;
 			children = (
-				E2F0FDCC1D25DF2700F04297 /* AudioKit.framework */,
+				E2F0FDCF1D27315100F04297 /* AudioKit.framework */,
 				E23ADEF31D19F36500240D79 /* SimpleFM */,
 				E23ADEF21D19F36500240D79 /* Products */,
 			);
@@ -152,7 +149,6 @@
 		E23ADEF31D19F36500240D79 /* SimpleFM */ = {
 			isa = PBXGroup;
 			children = (
-				E2F0FDCA1D25DF1900F04297 /* AudioKit.framework */,
 				E23ADEF41D19F36500240D79 /* AppDelegate.swift */,
 				E23ADEF81D19F36500240D79 /* Main.storyboard */,
 				E23ADFC41D1E3FB100240D79 /* AudioSystem */,

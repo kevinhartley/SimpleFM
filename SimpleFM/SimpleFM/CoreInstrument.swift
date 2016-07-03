@@ -217,7 +217,7 @@ class CoreInstrument: AKPolyphonicInstrument {
     /// - parameter note: MIDI Note Number to start
     /// - parameter velocity: MIDI Velocity (0-127) to trigger the note at
     ///
-    func playVoice(voice: AKVoice, note: Int, velocity: Int) {
+    override func play(voice voice: AKVoice, noteNumber: MIDINoteNumber, velocity: MIDIVelocity) {
         let coreVoice = voice as! CoreVoice
         
         let commonAmplitude = Double(velocity)/127.0
@@ -228,11 +228,11 @@ class CoreInstrument: AKPolyphonicInstrument {
         coreVoice.fmOsc.amplitude  = commonAmplitude
 //        coreVoice.noise.amplitude  = commonAmplitude
         
-        coreVoice.vco1.frequency = (Double(note + offset1) + globalbend).midiNoteToFrequency()
-        coreVoice.vco2.frequency = (Double(note + offset2) + globalbend).midiNoteToFrequency()
+        coreVoice.vco1.frequency = (Double(noteNumber + offset1) + globalbend).midiNoteToFrequency()
+        coreVoice.vco2.frequency = (Double(noteNumber + offset2) + globalbend).midiNoteToFrequency()
         
 //        coreVoice.subOsc.frequency = (Double(note - 12) + globalbend).midiNoteToFrequency()
-        coreVoice.fmOsc.baseFrequency = note.midiNoteToFrequency()
+        coreVoice.fmOsc.baseFrequency = noteNumber.midiNoteToFrequency()
         
         coreVoice.start()
     }
@@ -242,7 +242,7 @@ class CoreInstrument: AKPolyphonicInstrument {
     /// - parameter voice: Voice to stop
     /// - parameter note: MIDI Note Number to stop
     ///
-    func stopVoice(voice: AKVoice, note: Int) {
+    override func stop(voice voice: AKVoice, noteNumber: MIDINoteNumber) {
         let coreVoice = voice as! CoreVoice
         coreVoice.stop()
     }

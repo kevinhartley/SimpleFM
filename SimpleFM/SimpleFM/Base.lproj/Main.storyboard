@@ -17,555 +17,397 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hD2-sE-Kdz">
-                                <rect key="frame" x="50" y="50" width="924" height="718"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Jet-Hb-fFI" userLabel="Top">
-                                        <rect key="frame" x="0.0" y="0.0" width="924" height="220"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dqn-kT-RPc">
-                                                <rect key="frame" x="0.0" y="40" width="532" height="180"/>
-                                                <subviews>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oot-cv-Fkg" userLabel="VCO1 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="180"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7d-Er-9iQ" userLabel="VCO1 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="188" y="0.0" width="157" height="180"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-nm-JpQ" userLabel="FM Amt Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="375" y="0.0" width="158" height="180"/>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="532" id="BOg-Qi-VEx"/>
-                                                    <constraint firstAttribute="height" constant="180" id="alm-Xx-kpk"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="muj-V1-MT6" userLabel="Sliders">
-                                                <rect key="frame" x="578" y="20" width="300" height="200"/>
-                                                <subviews>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkr-4H-RCm" userLabel="Attack Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="200"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-sl-n6Z" userLabel="Decay Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="85" y="0.0" width="45" height="200"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-5N-79u" userLabel="Sustain Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="170" y="0.0" width="45" height="200"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-ts-PB4" userLabel="Release Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="255" y="0.0" width="45" height="200"/>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="70v-J3-G6i"/>
-                                                    <constraint firstAttribute="height" constant="200" id="9qo-AM-X64"/>
-                                                    <constraint firstAttribute="width" constant="200" id="b90-j1-Vi1"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="b90-j1-Vi1"/>
-                                                    </mask>
-                                                </variation>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MX7-Bp-oav">
-                                                <rect key="frame" x="924" y="170" width="0.0" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" id="UCF-iI-08F"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="220" id="5GE-OA-XEu"/>
-                                        </constraints>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wg-VQ-UaS">
-                                        <rect key="frame" x="0.0" y="220" width="924" height="19"/>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="CeW-ng-EL2" userLabel="2">
-                                        <rect key="frame" x="0.0" y="239" width="924" height="220"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-CF-zX0" userLabel="Osc2/FM Mod/Volume">
-                                                <rect key="frame" x="0.0" y="20" width="534" height="180"/>
-                                                <subviews>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-fm-x6H" userLabel="VCO2 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="180"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-D3-JzT" userLabel="VCO2 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
-                                                        <rect key="frame" x="188" y="0.0" width="158" height="180"/>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-aB-TTJ" userLabel="FM Mod Knob" customClass="KnobMedium" customModule="SimpleFM">
-                                                        <rect key="frame" x="376" y="0.0" width="158" height="180"/>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="R7j-xL-umb"/>
-                                                    <constraint firstAttribute="width" constant="532" id="k74-7l-93P"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qks-S9-rWb" userLabel="FX/ Mix">
-                                                <rect key="frame" x="584" y="50" width="120" height="120"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lg6-eJ-pd4" userLabel="Delay/Reverb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="120"/>
-                                                        <subviews>
-                                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSh-yY-R9z" userLabel="Reverb Amt Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="50" id="i9i-zX-ufb"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="oS6-UO-xNX"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-z8-FWS" userLabel="Delay Time Knob " customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="50" id="Car-Sv-l2g"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="Sr4-iP-kyr"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="90" id="fo4-DW-Do8"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Kb-lb-MYV" userLabel="Mix">
-                                                        <rect key="frame" x="70" y="0.0" width="50" height="120"/>
-                                                        <subviews>
-                                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFM-Sf-Ta7" userLabel="Reverb Mix Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="90" id="SPS-IR-ghs"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="ZFp-YE-Rwi"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-Ib-GiX" userLabel="Delay Mix Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="90" id="E9s-PL-IkR"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="cBm-Fu-F9S"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="aoV-6V-6ZC"/>
-                                                    <constraint firstAttribute="height" constant="120" id="bnU-lk-Fse"/>
-                                                </constraints>
-                                            </stackView>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uw-hb-lzo" userLabel="Cutoff Knob" customClass="KnobLarge" customModule="SimpleFM" customModuleProvider="target">
-                                                <rect key="frame" x="754" y="60" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="ry7-ji-CgY"/>
-                                                    <constraint firstAttribute="height" constant="100" id="xQe-kG-SAF"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cL0-WR-KGa">
-                                                <rect key="frame" x="904" y="85" width="20" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="uLb-G9-7Oa"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="220" id="j4N-ni-o1z"/>
-                                        </constraints>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oS0-dr-4gJ" userLabel="Spacer">
-                                        <rect key="frame" x="0.0" y="459" width="924" height="10"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="10" id="ihD-Uq-fpu"/>
-                                        </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="560" translatesAutoresizingMaskIntoConstraints="NO" id="FA8-JF-HxO" userLabel="3">
-                                        <rect key="frame" x="0.0" y="469" width="924" height="45"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3Nu-M4-BNL" userLabel="Octave">
-                                                <rect key="frame" x="0.0" y="4" width="138" height="38"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONz-65-Ks9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="38"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="RIJ-mg-Xdi"/>
-                                                        </constraints>
-                                                        <state key="normal" image="button_left"/>
-                                                        <connections>
-                                                            <action selector="octaveDownPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35b-wV-Krg"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ld-rQ-CHe">
-                                                        <rect key="frame" x="54" y="0.0" width="45" height="38"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="rjW-Nx-C65"/>
-                                                        </constraints>
-                                                        <state key="normal" image="button_right"/>
-                                                        <connections>
-                                                            <action selector="octaveUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0C-ZV-0uV"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcs-Kz-V6e" userLabel="Hold Lbl">
-                                                        <rect key="frame" x="108" y="0.0" width="30" height="38"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="n4Z-a7-a2r"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.67369518979999998" green="0.67369518979999998" blue="0.67369518979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-ow-2n9" userLabel="Switches">
-                                                <rect key="frame" x="698" y="0.0" width="226" height="45"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycX-CL-ftN" userLabel="Hold Toggle">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="6I9-Hu-AVG"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Hold" image="roundbtn_off"/>
-                                                        <state key="selected" image="roundbtn_on"/>
-                                                        <connections>
-                                                            <action selector="holdModeToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MK1-5p-f3n"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzF-9F-Axd" userLabel="Fatten Toggle">
-                                                        <rect key="frame" x="105" y="0.0" width="61" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="Nsy-My-GB1"/>
-                                                            <constraint firstAttribute="height" constant="45" id="QbU-Os-mTh"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Fatten" image="button_off"/>
-                                                        <state key="selected" image="button_on"/>
-                                                        <connections>
-                                                            <action selector="stereoFattenToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Eb-ra-RW5"/>
-                                                        </connections>
-                                                    </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sp-4p-ERa">
-                                                        <rect key="frame" x="226" y="0.0" width="0.0" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="15" id="3eN-Dh-erN"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="9sp-4p-ERa" secondAttribute="trailing" constant="15" id="bPB-Hm-3hB"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-DG-7EO" userLabel="Spacer">
-                                        <rect key="frame" x="0.0" y="514" width="924" height="10"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="10" id="UxR-oB-DEE"/>
-                                        </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QWD-3F-707" userLabel="Keys">
-                                        <rect key="frame" x="0.0" y="524" width="924" height="194"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="248" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-cc-XC6" userLabel="C">
-                                                <rect key="frame" x="0.0" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey"/>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="kJ4-1a-kS0"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="GY9-xo-ra5"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBI-k5-a0d"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="249" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNz-CK-b8h" userLabel="C#">
-                                                <rect key="frame" x="37" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Acb-Cd-jCN"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="SVv-is-XjV"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHe-W9-fNX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="250" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVR-3u-9zQ" userLabel="D">
-                                                <rect key="frame" x="74" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="xVU-hB-dSa"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FuN-JC-qZb"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="spH-ut-UXv"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="251" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj5-ce-9A4" userLabel="D#">
-                                                <rect key="frame" x="111" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="0GB-Ji-kh0"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="VMS-lN-YNP"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8A-qC-zBC"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="252" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-1J-C3J" userLabel="E">
-                                                <rect key="frame" x="148" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="PVR-f8-TDl"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZ0-BP-tXb"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="uHf-qs-dgS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="253" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLL-Ir-Nsa" userLabel="F">
-                                                <rect key="frame" x="185" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.69929956900000001" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="4I2-ga-19I"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UZ-Tm-hJn"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="yhF-VR-GNo"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="254" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dww-7a-nd8" userLabel="F#">
-                                                <rect key="frame" x="222" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="BPh-fy-THb"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1K1-bR-plB"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="U5o-5g-OhF"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="255" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoI-gd-a6w" userLabel="G">
-                                                <rect key="frame" x="259" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="ori-z9-G7x"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZf-nQ-i5Q"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="qDu-UJ-5oH"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="256" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGS-xX-Pwo" userLabel="G#">
-                                                <rect key="frame" x="296" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="tCJ-qM-kTL"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Fg4-eF-ocO"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8V-3q-rGl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="257" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-pv-Yoy" userLabel="A">
-                                                <rect key="frame" x="333" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="BJR-P6-vaz"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gS-iD-j94"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="8Ob-5J-eaM"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="258" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-Ze-7y6" userLabel="A#">
-                                                <rect key="frame" x="370" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="vjI-Q7-7Qb"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="feW-Z8-ho5"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zUG-af-Pve"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="259" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqi-rM-mom" userLabel="B">
-                                                <rect key="frame" x="407" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="SQv-qr-hYk"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="EJS-OU-HEK"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOK-gU-4Jr"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="260" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VU-Wd-At9" userLabel="C2">
-                                                <rect key="frame" x="444" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="PJZ-KF-JOm"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="JM8-jC-7XJ"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFV-KW-xP9"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="261" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c24-O7-zR9" userLabel="C2#">
-                                                <rect key="frame" x="481" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="AfQ-be-lKJ"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="erd-yK-KTQ"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhH-Ox-geo"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="262" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Go-gN-cIv" userLabel="D2">
-                                                <rect key="frame" x="518" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="uJH-OM-GR5"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Qp5-NB-Yjn"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XsU-GT-baM"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="263" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-QU-sgk" userLabel="D2#">
-                                                <rect key="frame" x="555" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Ra3-Ba-b2d"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="s5q-g3-Vb0"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPH-AV-6dU"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="264" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfm-1x-Pkt" userLabel="E2">
-                                                <rect key="frame" x="592" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="6YH-Yd-ynx"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MlX-4Y-cUC"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="nB8-ax-QpK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="265" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWN-5W-61A" userLabel="F2">
-                                                <rect key="frame" x="629" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="f5v-5N-Nhz"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="B23-rx-oya"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wf9-VB-EMm"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="266" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3I-AY-6y3" userLabel="F2#">
-                                                <rect key="frame" x="666" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="7Wr-OG-2sk"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uvy-GN-PzR"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="qlA-uP-sFf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="267" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dw7-en-yTV" userLabel="G2">
-                                                <rect key="frame" x="702" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="dSC-ag-4be"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="SXG-ne-gqC"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ7-ah-k9a"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="268" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceg-gC-aUD" userLabel="A2#">
-                                                <rect key="frame" x="739" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="dGd-IA-HOf"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="X8F-s7-Uql"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnh-zN-Rau"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="269" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewM-8U-6wl" userLabel="A2">
-                                                <rect key="frame" x="776" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Do1-ZQ-rNF"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTL-9z-312"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="r7K-2J-4xx"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="270" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-EM-epx" userLabel="G2#">
-                                                <rect key="frame" x="813" y="0.0" width="37" height="116"/>
-                                                <state key="normal" image="blackkey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="3Fa-0L-3r7"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="aze-al-oN3"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doe-Xg-2Ba"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="271" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-bO-nK9" userLabel="B2">
-                                                <rect key="frame" x="850" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Q4V-Lg-zNn"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="pbQ-HO-DGX"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rEw-aD-L4o"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="272" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0u-rY-em3" userLabel="C3">
-                                                <rect key="frame" x="887" y="0.0" width="37" height="184"/>
-                                                <state key="normal" image="whitekey">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Ii4-1K-f1S"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Lt-TN-uax"/>
-                                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="UrB-fP-RIf"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="194" id="xa4-UI-e6u"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oot-cv-Fkg" userLabel="VCO1 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="433" y="294" width="158" height="180"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7d-Er-9iQ" userLabel="VCO1 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="386" y="294" width="251" height="180"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-nm-JpQ" userLabel="FM Amt Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="246" y="294" width="532" height="180"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xkr-4H-RCm" userLabel="Attack Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="489" y="284" width="45" height="200"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-sl-n6Z" userLabel="Decay Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="475" y="284" width="74" height="200"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-5N-79u" userLabel="Sustain Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="447" y="284" width="130" height="200"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-ts-PB4" userLabel="Release Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="362" y="284" width="300" height="200"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-fm-x6H" userLabel="VCO2 Semi Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="433" y="294" width="158" height="180"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-D3-JzT" userLabel="VCO2 Amp Knob" customClass="KnobMedium" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="386" y="294" width="252" height="180"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-aB-TTJ" userLabel="FM Mod Knob" customClass="KnobMedium" customModule="SimpleFM">
+                                <rect key="frame" x="245" y="294" width="534" height="180"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSh-yY-R9z" userLabel="Reverb Amt Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="341" y="359" width="342" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="CeW-ng-EL2" secondAttribute="trailing" constant="50" id="6VA-Fq-wYC"/>
-                                    <constraint firstItem="Jet-Hb-fFI" firstAttribute="leading" secondItem="hD2-sE-Kdz" secondAttribute="leading" id="AEv-sT-fdw"/>
-                                    <constraint firstItem="CeW-ng-EL2" firstAttribute="leading" secondItem="hD2-sE-Kdz" secondAttribute="leading" constant="20" symbolic="YES" id="RiO-v2-h0d"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jet-Hb-fFI" secondAttribute="trailing" id="cMS-aO-QAl"/>
+                                    <constraint firstAttribute="width" constant="50" id="i9i-zX-ufb"/>
+                                    <constraint firstAttribute="height" constant="50" id="oS6-UO-xNX"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AEv-sT-fdw"/>
-                                        <exclude reference="cMS-aO-QAl"/>
-                                        <exclude reference="6VA-Fq-wYC"/>
-                                        <exclude reference="RiO-v2-h0d"/>
-                                    </mask>
-                                </variation>
-                            </stackView>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-z8-FWS" userLabel="Delay Time Knob " customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="341" y="359" width="342" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Car-Sv-l2g"/>
+                                    <constraint firstAttribute="height" constant="50" id="Sr4-iP-kyr"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFM-Sf-Ta7" userLabel="Reverb Mix Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="341" y="359" width="342" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="SPS-IR-ghs"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZFp-YE-Rwi"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-Ib-GiX" userLabel="Delay Mix Knob" customClass="KnobSmall" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="341" y="359" width="342" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="E9s-PL-IkR"/>
+                                    <constraint firstAttribute="height" constant="50" id="cBm-Fu-F9S"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uw-hb-lzo" userLabel="Cutoff Knob" customClass="KnobLarge" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="462" y="334" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ry7-ji-CgY"/>
+                                    <constraint firstAttribute="height" constant="100" id="xQe-kG-SAF"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONz-65-Ks9">
+                                <rect key="frame" x="489" y="365" width="45" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="RIJ-mg-Xdi"/>
+                                </constraints>
+                                <state key="normal" image="button_left"/>
+                                <connections>
+                                    <action selector="octaveDownPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35b-wV-Krg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ld-rQ-CHe">
+                                <rect key="frame" x="489" y="365" width="45" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="rjW-Nx-C65"/>
+                                </constraints>
+                                <state key="normal" image="button_right"/>
+                                <connections>
+                                    <action selector="octaveUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0C-ZV-0uV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcs-Kz-V6e" userLabel="Hold Lbl">
+                                <rect key="frame" x="497" y="374" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="n4Z-a7-a2r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.67369518979999998" green="0.67369518979999998" blue="0.67369518979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycX-CL-ftN" userLabel="Hold Toggle">
+                                <rect key="frame" x="489" y="362" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="6I9-Hu-AVG"/>
+                                </constraints>
+                                <state key="normal" title="Hold" image="roundbtn_off"/>
+                                <state key="selected" image="roundbtn_on"/>
+                                <connections>
+                                    <action selector="holdModeToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MK1-5p-f3n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzF-9F-Axd" userLabel="Fatten Toggle">
+                                <rect key="frame" x="381" y="362" width="262" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Nsy-My-GB1"/>
+                                    <constraint firstAttribute="height" constant="45" id="QbU-Os-mTh"/>
+                                </constraints>
+                                <state key="normal" title="Fatten" image="button_off"/>
+                                <state key="selected" image="button_on"/>
+                                <connections>
+                                    <action selector="stereoFattenToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Eb-ra-RW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="248" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-cc-XC6" userLabel="C">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey"/>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="kJ4-1a-kS0"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="GY9-xo-ra5"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBI-k5-a0d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="249" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNz-CK-b8h" userLabel="C#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Acb-Cd-jCN"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="SVv-is-XjV"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHe-W9-fNX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="250" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVR-3u-9zQ" userLabel="D">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="xVU-hB-dSa"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FuN-JC-qZb"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="spH-ut-UXv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="251" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj5-ce-9A4" userLabel="D#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="0GB-Ji-kh0"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="VMS-lN-YNP"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8A-qC-zBC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="252" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-1J-C3J" userLabel="E">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="PVR-f8-TDl"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZ0-BP-tXb"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="uHf-qs-dgS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="253" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLL-Ir-Nsa" userLabel="F">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.69929956900000001" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="4I2-ga-19I"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UZ-Tm-hJn"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="yhF-VR-GNo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="254" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dww-7a-nd8" userLabel="F#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="BPh-fy-THb"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1K1-bR-plB"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="U5o-5g-OhF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="255" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoI-gd-a6w" userLabel="G">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="ori-z9-G7x"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZf-nQ-i5Q"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="qDu-UJ-5oH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="256" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGS-xX-Pwo" userLabel="G#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="tCJ-qM-kTL"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Fg4-eF-ocO"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8V-3q-rGl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="257" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-pv-Yoy" userLabel="A">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="BJR-P6-vaz"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gS-iD-j94"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="8Ob-5J-eaM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="258" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-Ze-7y6" userLabel="A#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="vjI-Q7-7Qb"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="feW-Z8-ho5"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zUG-af-Pve"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="259" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqi-rM-mom" userLabel="B">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="SQv-qr-hYk"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="EJS-OU-HEK"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOK-gU-4Jr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="260" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VU-Wd-At9" userLabel="C2">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="PJZ-KF-JOm"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="JM8-jC-7XJ"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFV-KW-xP9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="261" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c24-O7-zR9" userLabel="C2#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="AfQ-be-lKJ"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="erd-yK-KTQ"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhH-Ox-geo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="262" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Go-gN-cIv" userLabel="D2">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="uJH-OM-GR5"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Qp5-NB-Yjn"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XsU-GT-baM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="263" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-QU-sgk" userLabel="D2#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Ra3-Ba-b2d"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="s5q-g3-Vb0"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPH-AV-6dU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="264" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfm-1x-Pkt" userLabel="E2">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="6YH-Yd-ynx"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MlX-4Y-cUC"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="nB8-ax-QpK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="265" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWN-5W-61A" userLabel="F2">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="f5v-5N-Nhz"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="B23-rx-oya"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wf9-VB-EMm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="266" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3I-AY-6y3" userLabel="F2#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="7Wr-OG-2sk"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uvy-GN-PzR"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="qlA-uP-sFf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="267" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dw7-en-yTV" userLabel="G2">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="dSC-ag-4be"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="SXG-ne-gqC"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ7-ah-k9a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="268" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceg-gC-aUD" userLabel="A2#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="dGd-IA-HOf"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="X8F-s7-Uql"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnh-zN-Rau"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="269" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewM-8U-6wl" userLabel="A2">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Do1-ZQ-rNF"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTL-9z-312"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="r7K-2J-4xx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="270" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-EM-epx" userLabel="G2#">
+                                <rect key="frame" x="493" y="326" width="37" height="116"/>
+                                <state key="normal" image="blackkey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="3Fa-0L-3r7"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="aze-al-oN3"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doe-Xg-2Ba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="271" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-bO-nK9" userLabel="B2">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Q4V-Lg-zNn"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="pbQ-HO-DGX"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rEw-aD-L4o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="272" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0u-rY-em3" userLabel="C3">
+                                <rect key="frame" x="493" y="292" width="37" height="184"/>
+                                <state key="normal" image="whitekey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Ii4-1K-f1S"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Lt-TN-uax"/>
+                                    <action selector="keyReleased:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="UrB-fP-RIf"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="hD2-sE-Kdz" secondAttribute="trailing" constant="50" id="977-FO-yOn"/>
-                            <constraint firstItem="hD2-sE-Kdz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="CHd-xJ-bqb"/>
-                            <constraint firstItem="hD2-sE-Kdz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="dYX-nK-WFw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hD2-sE-Kdz" secondAttribute="bottom" id="mhC-sk-feF"/>
-                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -575,8 +417,10 @@
                         <outlet property="decaySlider" destination="mJL-sl-n6Z" id="FQC-fE-p7T"/>
                         <outlet property="delayMixKnob" destination="6S4-Ib-GiX" id="DzM-oa-hwY"/>
                         <outlet property="delayTimeKnob" destination="TDs-z8-FWS" id="an5-jL-jGH"/>
+                        <outlet property="fattenToggle" destination="yzF-9F-Axd" id="ZEw-Y3-C90"/>
                         <outlet property="fmMixKnob" destination="Vah-nm-JpQ" id="Sz3-EX-TxI"/>
                         <outlet property="fmModKnob" destination="9iv-aB-TTJ" id="eIW-K0-EUH"/>
+                        <outlet property="holdToggle" destination="ycX-CL-ftN" id="71f-wD-I5j"/>
                         <outlet property="octavePositionLabel" destination="hcs-Kz-V6e" id="0Pq-hN-f13"/>
                         <outlet property="osc1SemitonesKnob" destination="oot-cv-Fkg" id="tb3-d3-G5J"/>
                         <outlet property="osc2SemitonesKnob" destination="B4I-fm-x6H" id="hOB-iM-uBd"/>

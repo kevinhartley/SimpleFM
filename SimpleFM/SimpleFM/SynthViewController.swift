@@ -17,7 +17,7 @@ public class SynthViewController: UIViewController {
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var octavePositionLabel: UILabel!
-    @IBOutlet weak var oscMixKnob: KnobMedium!
+    var oscMixKnob: KnobMedium!
     @IBOutlet weak var osc1SemitonesKnob: KnobMedium!
     @IBOutlet weak var osc2SemitonesKnob: KnobMedium!
 //    @IBOutlet weak var osc2DetuneKnob: KnobMedium!
@@ -41,12 +41,12 @@ public class SynthViewController: UIViewController {
     @IBOutlet weak var decaySlider: VerticalSlider!
     @IBOutlet weak var sustainSlider: VerticalSlider!
     @IBOutlet weak var releaseSlider: VerticalSlider!
-    @IBOutlet weak var vco1Toggle: UIButton!
-    @IBOutlet weak var vco2Toggle: UIButton!
+    var vco1Toggle: UIButton!
+    var vco2Toggle: UIButton!
 //    @IBOutlet weak var bitcrushToggle: UIButton! 
-    @IBOutlet weak var filterToggle: UIButton!
-    @IBOutlet weak var delayToggle: UIButton!
-    @IBOutlet weak var reverbToggle: UIButton!
+    var filterToggle: UIButton!
+    var delayToggle: UIButton!
+    var reverbToggle: UIButton!
     @IBOutlet weak var fattenToggle: UIButton!
     @IBOutlet weak var holdToggle: UIButton!
 //    @IBOutlet weak var monoToggle: UIButton!
@@ -192,7 +192,7 @@ public class SynthViewController: UIViewController {
 //        noiseMixKnob.value = conductor.core.noiseMix
         
         oscillator1VolKnob.value = conductor.core.vcoBalance
-//        oscillator2VolKnob.value = conductor.core.vco2Balance
+        oscillator2VolKnob.value = conductor.core.vcoBalance
         
 //        lfoAmtKnob.maximum = 1200
 //        lfoAmtKnob.value = conductor.filterSection.lfoAmplitude
@@ -456,20 +456,20 @@ public class SynthViewController: UIViewController {
         updateKeyToDownPosition(key)
         let midiNote = midiNoteFromTag(key.tag)
 //        statusLabel.text = "Key Pressed: \(noteNameFromMidiNote(midiNote))"
-        conductor.core.playNote(midiNote, velocity: 127)
+        conductor.core.play(noteNumber: midiNote, velocity: 127)
     }
     
     func turnOffKey(key: UIButton) {
         updateKeyToUpPosition(key)
 //        statusLabel.text = "Key Released"
-        conductor.core.stopNote(midiNoteFromTag(key.tag))
+        conductor.core.stop(noteNumber: midiNoteFromTag(key.tag))
     }
     
     func turnOffHeldKeys() {
         updateAllKeysToUpPosition()
         
         for note in 0...127 {
-            conductor.core.stopNote(note)
+            conductor.core.stop(noteNumber: note)
         }
         midiNotesHeld.removeAll(keepCapacity: false)
     }
@@ -565,12 +565,12 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
         // VCOs
         case ControlTag.Vco1Semitones.rawValue:
             let intValue = Int(floor(value))
-//            statusLabel.text = "Semitones: \(intValue)"
+            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset1 = intValue
             
         case ControlTag.Vco2Semitones.rawValue:
             let intValue = Int(floor(value))
-//            statusLabel.text = "Semitones: \(intValue)"
+            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset2 = intValue
             
 //        case ControlTag.Vco2Detune.rawValue:
@@ -578,7 +578,7 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
 //            conductor.core.detune = value
             
         case ControlTag.OscMix.rawValue:
-//            statusLabel.text = "OscMix: \(value.decimalString)"
+            statusLabel.text = "OscMix: \(value.decimalString)"
             conductor.core.vcoBalance = 0.50 //<-- i added 0.50, was --> value
             
 //        case ControlTag.OscMix.rawValue:
@@ -650,16 +650,16 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             conductor.reverb.feedback = value
             
         case ControlTag.ReverbMix.rawValue:
-//            statusLabel.text = "Reverb Mix: \(value.decimalString)"
+            statusLabel.text = "Reverb Mix: \(value.decimalString)"
             conductor.reverbMixer.balance = value
             
         // Master
         case ControlTag.MasterVol.rawValue:
-//            statusLabel.text = "Oscillator 1 Vol: \(oscillator1VolKnob.knobValue.percentageString)"
+            statusLabel.text = "Oscillator 1 Vol: \(oscillator1VolKnob.knobValue.percentageString)"
             conductor.masterVolume.volume = value
             
         case ControlTag.MasterVol.rawValue:
-//            statusLabel.text = "Oscillator 2 Vol: \(oscillator2VolKnob.knobValue.percentageString)"
+            statusLabel.text = "Oscillator 2 Vol: \(oscillator2VolKnob.knobValue.percentageString)"
             conductor.masterVolume.volume = value
             
         default:
