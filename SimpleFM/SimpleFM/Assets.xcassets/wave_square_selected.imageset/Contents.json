@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "20mm Black.png",
+      "filename" : "wave_square_selected.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "20mm Black-1.png",
+      "filename" : "wave_square_selected@2x.png",
       "scale" : "2x"
     },
     {
