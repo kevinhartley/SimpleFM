@@ -13,7 +13,7 @@ extension SynthViewController {
     //*****************************************************************
 
     func setDelegates() {
-//        oscMixKnob.delegate = self
+        oscMixKnob.delegate = self
         cutoffKnob.delegate = self
 //        rezKnob.delegate = self
         osc1SemitonesKnob.delegate = self
@@ -26,13 +26,13 @@ extension SynthViewController {
         delayMixKnob.delegate = self
         reverbAmtKnob.delegate = self
         reverbMixKnob.delegate = self
-//        subMixKnob.delegate = self
+        subMixKnob.delegate = self
         fmMixKnob.delegate = self
         fmModKnob.delegate = self
 //        morphKnob.delegate = self
 //        noiseMixKnob.delegate = self
-        oscillator1VolKnob.delegate = self
-        oscillator2VolKnob.delegate = self
+//        osc1VolKnob.delegate = self
+//        osc2VolKnob.delegate = self
         attackSlider.delegate = self
         decaySlider.delegate = self
         sustainSlider.delegate = self

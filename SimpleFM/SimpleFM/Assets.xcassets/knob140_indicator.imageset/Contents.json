@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "testindicator2.png",
+      "filename" : "KnobMediumInd_90.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "testindicator1.png",
+      "filename" : "KnobMediumInd_180.png",
       "scale" : "2x"
     },
     {

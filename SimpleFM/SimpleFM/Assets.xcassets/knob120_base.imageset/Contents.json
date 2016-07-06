@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "knob120_base.png",
+      "filename" : "knob140_base.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "knob120_base@2x.png",
+      "filename" : "knob140_base@2x.png",
       "scale" : "2x"
     },
     {

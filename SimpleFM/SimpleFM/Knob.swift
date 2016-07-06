@@ -10,6 +10,10 @@ import UIKit
 
 @IBDesignable
 public class Knob: UIView {
+    
+    var smallTag = 0
+    var mediumTag = 4
+    var largeTag = 10
 
     var minimum = 0.0 {
         didSet {

@@ -22,6 +22,7 @@ extension Knob {
         for touch in touches {
             let touchPoint = touch.locationInView(self)
             setPercentagesWithTouchPoint(touchPoint)
+            
         }
     }
 

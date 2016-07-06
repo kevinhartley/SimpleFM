@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "20mm Black.png",
+      "filename" : "KnobMedium_90.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "20mm Black-1.png",
+      "filename" : "KnobMedium_180.png",
       "scale" : "2x"
     },
     {

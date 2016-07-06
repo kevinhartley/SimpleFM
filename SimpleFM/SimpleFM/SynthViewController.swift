@@ -17,7 +17,7 @@ public class SynthViewController: UIViewController {
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var octavePositionLabel: UILabel!
-    var oscMixKnob: KnobMedium!
+    @IBOutlet weak var oscMixKnob: KnobMedium!
     @IBOutlet weak var osc1SemitonesKnob: KnobMedium!
     @IBOutlet weak var osc2SemitonesKnob: KnobMedium!
 //    @IBOutlet weak var osc2DetuneKnob: KnobMedium!
@@ -30,13 +30,11 @@ public class SynthViewController: UIViewController {
     @IBOutlet weak var reverbMixKnob: KnobSmall!
     @IBOutlet weak var cutoffKnob: KnobLarge!
 //    @IBOutlet weak var rezKnob: KnobSmall!
-//    @IBOutlet weak var subMixKnob: KnobSmall!
+    @IBOutlet weak var subMixKnob: KnobMedium!
     @IBOutlet weak var fmMixKnob: KnobMedium!
     @IBOutlet weak var fmModKnob: KnobMedium!
 //    @IBOutlet weak var noiseMixKnob: KnobSmall!
 //    @IBOutlet weak var morphKnob: KnobSmall!
-    @IBOutlet weak var oscillator1VolKnob: KnobMedium!
-    @IBOutlet weak var oscillator2VolKnob: KnobMedium!
     @IBOutlet weak var attackSlider: VerticalSlider!
     @IBOutlet weak var decaySlider: VerticalSlider!
     @IBOutlet weak var sustainSlider: VerticalSlider!
@@ -126,8 +124,7 @@ public class SynthViewController: UIViewController {
         conductor.core.offset2 = 6 // VCO2 Semitones
         /* conductor.core.detune = 0.0 */ // VCO2 Detune (Hz)
         conductor.core.vcoBalance = 0.5 // VCO1/VCO2 Mix
-//        conductor.core.vco2Balance = 0.5 // VCO1/VCO2 Mix
-        /* conductor.core.subOscMix = 0.0 */ // SubOsc Mix
+        conductor.core.subOscMix = 0.0 // SubOsc Mix
         conductor.core.fmOscMix = 0.0 // FM Mix
         conductor.core.fmMod = 0.0 // FM Modulation Amt
         conductor.core.morph = 0.0 // Morphing between waveforms
@@ -177,8 +174,8 @@ public class SynthViewController: UIViewController {
 //        osc2DetuneKnob.maximum = 4
 //        osc2DetuneKnob.value = conductor.core.detune
 //        
-//        subMixKnob.maximum = 4.5
-//        subMixKnob.value = conductor.core.subOscMix
+        subMixKnob.maximum = 4.5
+        subMixKnob.value = conductor.core.subOscMix
         
         fmMixKnob.maximum = 1.25
         fmMixKnob.value = conductor.core.fmOscMix
@@ -190,9 +187,12 @@ public class SynthViewController: UIViewController {
 //        morphKnob.value = conductor.core.morph
 //        
 //        noiseMixKnob.value = conductor.core.noiseMix
+
         
-        oscillator1VolKnob.value = conductor.core.vcoBalance
-        oscillator2VolKnob.value = conductor.core.vcoBalance
+//        osc1VolKnob.value = conductor.core.vco1Balance
+//        osc2VolKnob.value = conductor.core.vco2Balance
+        
+        oscMixKnob.value = conductor.core.vcoBalance
         
 //        lfoAmtKnob.maximum = 1200
 //        lfoAmtKnob.value = conductor.filterSection.lfoAmplitude
@@ -210,11 +210,11 @@ public class SynthViewController: UIViewController {
         reverbAmtKnob.value = conductor.reverb.feedback
         reverbMixKnob.value = conductor.reverbMixer.balance
         
-        oscillator1VolKnob.maximum = 30.0
-        oscillator1VolKnob.value = conductor.masterVolume.volume
-        
-        oscillator2VolKnob.maximum = 30.0
-        oscillator2VolKnob.value = conductor.masterVolume.volume
+//        oscillator1VolKnob.maximum = 30.0
+//        osc1VolKnob.value = conductor.masterVolume.volume
+//
+//        osc2VolKnob.maximum = 30.0
+//        osc2VolKnob.value = conductor.masterVolume.volume
         
         // Calculate Logarithmic scales based on knob position
         conductor.filterSection.cutoffFrequency = cutoffFreqFromValue(Double(cutoffKnob.value))
@@ -565,21 +565,31 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
         // VCOs
         case ControlTag.Vco1Semitones.rawValue:
             let intValue = Int(floor(value))
-            statusLabel.text = "Semitones: \(intValue)"
+//            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset1 = intValue
             
         case ControlTag.Vco2Semitones.rawValue:
             let intValue = Int(floor(value))
-            statusLabel.text = "Semitones: \(intValue)"
+//            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset2 = intValue
+            
+//        case ControlTag.Vco1VolKnob.rawValue:
+//            let intValue = Int(floor(value))
+//            //            statusLabel.text = "Semitones: \(intValue)"
+//            conductor.core.offset1 = intValue
+//            
+//        case ControlTag.Vco2VolKnob.rawValue:
+//            let intValue = Int(floor(value))
+//            //            statusLabel.text = "Semitones: \(intValue)"
+//            conductor.core.offset1 = intValue
             
 //        case ControlTag.Vco2Detune.rawValue:
 //            statusLabel.text = "Detune: \(value.decimalString) Hz"
 //            conductor.core.detune = value
             
         case ControlTag.OscMix.rawValue:
-            statusLabel.text = "OscMix: \(value.decimalString)"
-            conductor.core.vcoBalance = 0.50 //<-- i added 0.50, was --> value
+//            statusLabel.text = "OscMix: \(value.decimalString)"
+            conductor.core.vcoBalance =  value
             
 //        case ControlTag.OscMix.rawValue:
 ////            statusLabel.text = "OscMix: \(value.decimalString)"
@@ -590,9 +600,9 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
 //            conductor.core.morph = value
             
         // Additional OSCs
-//        case ControlTag.SubMix.rawValue:
+        case ControlTag.SubMix.rawValue:
 //            statusLabel.text = "Sub Osc: \(subMixKnob.knobValue.percentageString)"
-//            conductor.core.subOscMix = value
+            conductor.core.subOscMix = value
             
         case ControlTag.FmMix.rawValue:
 //            statusLabel.text = "FM Amt: \(fmMixKnob.knobValue.percentageString)"
@@ -645,21 +655,21 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             if value == 0.99 {
                 statusLabel.text = "Reverb Size: Grand Canyon!"
             } else {
-                statusLabel.text = "Reverb Size: \(reverbAmtKnob.knobValue.percentageString)"
+//                statusLabel.text = "Reverb Size: \(reverbAmtKnob.knobValue.percentageString)"
             }
             conductor.reverb.feedback = value
             
         case ControlTag.ReverbMix.rawValue:
-            statusLabel.text = "Reverb Mix: \(value.decimalString)"
+//            statusLabel.text = "Reverb Mix: \(value.decimalString)"
             conductor.reverbMixer.balance = value
             
         // Master
         case ControlTag.MasterVol.rawValue:
-            statusLabel.text = "Oscillator 1 Vol: \(oscillator1VolKnob.knobValue.percentageString)"
+//            statusLabel.text = "Oscillator 1 Vol: \(oscillator1VolKnob.knobValue.percentageString)"
             conductor.masterVolume.volume = value
             
         case ControlTag.MasterVol.rawValue:
-            statusLabel.text = "Oscillator 2 Vol: \(oscillator2VolKnob.knobValue.percentageString)"
+//            statusLabel.text = "Oscillator 2 Vol: \(oscillator2VolKnob.knobValue.percentageString)"
             conductor.masterVolume.volume = value
             
         default:

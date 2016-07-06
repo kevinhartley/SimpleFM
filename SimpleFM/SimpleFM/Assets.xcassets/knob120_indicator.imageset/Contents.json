@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "knob120_indicator.png",
+      "filename" : "knob140_indicator.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "knob120_indicator@2x.png",
+      "filename" : "knob140_indicator@2x.png",
       "scale" : "2x"
     },
     {

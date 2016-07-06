@@ -11,14 +11,14 @@ import AudioKit
 class CoreVoice: AKVoice {
     var vco1: AKMorphingOscillator
     var vco2: AKMorphingOscillator
-//    var subOsc = AKOscillator()
+    var subOsc = AKOscillator()
     var fmOsc  = AKFMOscillator()
 //    var noise  = AKWhiteNoise()
     
     // We'll be using these simply to control volume independent of velocity
     var vco1Mixer: AKMixer
     var vco2Mixer: AKMixer
-//    var subOscMixer: AKMixer
+    var subOscMixer: AKMixer
     var fmOscMixer: AKMixer
 //    var noiseMixer: AKMixer
     
@@ -45,18 +45,18 @@ class CoreVoice: AKVoice {
         
         vco1Mixer   = AKMixer(vco1)
         vco2Mixer   = AKMixer(vco2)
-//        subOscMixer = AKMixer(subOsc)
+        subOscMixer = AKMixer(subOsc)
         fmOscMixer  = AKMixer(fmOsc)
 //        noiseMixer  = AKMixer(noise)
         
         // Default non-VCO's off
-//        subOscMixer.volume = 0
+        subOscMixer.volume = 0
         fmOscMixer.volume  = 0
 //        noiseMixer.volume  = 0
         
         vcoBalancer = AKDryWetMixer(vco1Mixer, vco2Mixer, balance: 0.5)
         
-        sourceMixer = AKMixer(vcoBalancer, fmOscMixer/*, subOscMixer, noiseMixer*/)
+        sourceMixer = AKMixer(vcoBalancer, fmOscMixer, subOscMixer /*noiseMixer*/)
         
         adsr = AKAmplitudeEnvelope(sourceMixer)
         
@@ -80,7 +80,7 @@ class CoreVoice: AKVoice {
     override func start() {
         
         // Do not automatically start the VCOs because the logic about that is higher up
-//        subOsc.start()
+        subOsc.start()
         fmOsc.start()
 //        noise.start()
         

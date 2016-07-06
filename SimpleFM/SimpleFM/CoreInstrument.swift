@@ -68,14 +68,14 @@ class CoreInstrument: AKPolyphonicInstrument {
     }
     
     
-//    var subOscMix = 0.0 {
-//        didSet {
-//            for voice in voices {
-//                let coreVoice = voice as! CoreVoice
-//                coreVoice.subOscMixer.volume = subOscMix
-//            }
-//        }
-//    }
+    var subOscMix = 0.0 {
+        didSet {
+            for voice in voices {
+                let coreVoice = voice as! CoreVoice
+                coreVoice.subOscMixer.volume = subOscMix
+            }
+        }
+    }
     
     var fmOscMix = 0.0 {
         didSet {
@@ -130,6 +130,8 @@ class CoreInstrument: AKPolyphonicInstrument {
 //            }
 //        }
 //    }
+    
+    
     
     var morph: Double = 0.0 {
         didSet {
@@ -224,14 +226,14 @@ class CoreInstrument: AKPolyphonicInstrument {
         
         coreVoice.vco1.amplitude   = commonAmplitude
         coreVoice.vco2.amplitude   = commonAmplitude
-//        coreVoice.subOsc.amplitude = commonAmplitude
+        coreVoice.subOsc.amplitude = commonAmplitude
         coreVoice.fmOsc.amplitude  = commonAmplitude
 //        coreVoice.noise.amplitude  = commonAmplitude
         
         coreVoice.vco1.frequency = (Double(noteNumber + offset1) + globalbend).midiNoteToFrequency()
         coreVoice.vco2.frequency = (Double(noteNumber + offset2) + globalbend).midiNoteToFrequency()
         
-//        coreVoice.subOsc.frequency = (Double(note - 12) + globalbend).midiNoteToFrequency()
+        coreVoice.subOsc.frequency = (Double(noteNumber - 12) + globalbend).midiNoteToFrequency()
         coreVoice.fmOsc.baseFrequency = noteNumber.midiNoteToFrequency()
         
         coreVoice.start()
