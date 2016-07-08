@@ -32,7 +32,7 @@ public class VerticalSlider: UIControl {
         }
     }
 
-    let knobSize = CGSize(width: 43, height: 31)
+    let knobSize = CGSize(width: 55, height: 31)
     let barMargin: CGFloat = 20.0
     var knobRect: CGRect!
     var barLength: CGFloat = 164.0

@@ -112,6 +112,16 @@ public class SynthViewController: UIViewController {
         view.backgroundColor = UIColor(patternImage: UIImage(named:"Synth Background")!)
     }
     
+    //MARK: - Home and Save Buttons
+    
+    @IBAction func homeButtonTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        
+    }
+    
     // *********************************************************
     // MARK: - Defaults/Presets
     // *********************************************************

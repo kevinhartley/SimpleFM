@@ -7,9 +7,66 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Preset Collection View Controller-->
+        <scene sceneID="nUh-eB-Fed">
+            <objects>
+                <collectionViewController id="KRc-dd-h22" customClass="PresetCollectionViewController" customModule="SimpleFM" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="OPF-7a-sNk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sGD-j2-SIL">
+                            <size key="itemSize" width="215" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="presetCell" id="Ufo-HX-dNa" customClass="PresetCollectionViewCell" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="215" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="215" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arv-NN-wlm">
+                                            <rect key="frame" x="8" y="150" width="199" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Coh-DW-vaX">
+                                            <rect key="frame" x="21" y="36" width="172" height="108"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="presetImageView" destination="Coh-DW-vaX" id="3ls-np-rPB"/>
+                                    <outlet property="presetTitleLabel" destination="arv-NN-wlm" id="8sp-Wz-wAB"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="KRc-dd-h22" id="0Al-jR-sL2"/>
+                            <outlet property="delegate" destination="KRc-dd-h22" id="y0u-gn-a7Y"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="rbW-wV-j32">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7bt-tS-PM7">
+                            <connections>
+                                <action selector="addPresetButtonTapped:" destination="KRc-dd-h22" id="1gM-uC-1zQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zkB-GM-LBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-371"/>
+        </scene>
         <!--Synth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="SynthViewController" customModule="SimpleFM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -52,34 +109,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Vah-nm-JpQ" secondAttribute="height" multiplier="1:1" id="QsU-hR-kBY"/>
                                     <constraint firstAttribute="height" constant="120" id="kDY-DY-vy6"/>
-                                </constraints>
-                            </view>
-                            <view opaque="NO" tag="123" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkr-4H-RCm" userLabel="Attack Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                <rect key="frame" x="609" y="47" width="42" height="164"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="164" id="ACS-bj-Nsg"/>
-                                    <constraint firstAttribute="width" secondItem="Xkr-4H-RCm" secondAttribute="height" multiplier="21:82" id="EQ5-cP-mOE"/>
-                                </constraints>
-                            </view>
-                            <view opaque="NO" tag="124" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-sl-n6Z" userLabel="Decay Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                <rect key="frame" x="699" y="47" width="42" height="164"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mJL-sl-n6Z" secondAttribute="height" multiplier="21:82" id="7cc-Aw-ExY"/>
-                                    <constraint firstAttribute="height" constant="164" id="hZE-2t-nrw"/>
-                                </constraints>
-                            </view>
-                            <view opaque="NO" tag="125" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-5N-79u" userLabel="Sustain Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                <rect key="frame" x="796" y="47" width="42" height="164"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="164" id="DAb-WP-vHw"/>
-                                    <constraint firstAttribute="width" secondItem="9LC-5N-79u" secondAttribute="height" multiplier="21:82" id="ivx-gN-qBA"/>
-                                </constraints>
-                            </view>
-                            <view opaque="NO" tag="126" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-ts-PB4" userLabel="Release Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
-                                <rect key="frame" x="887" y="47" width="42" height="164"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9Oo-ts-PB4" secondAttribute="height" multiplier="21:82" id="Hlv-UW-GMa"/>
-                                    <constraint firstAttribute="height" constant="164" id="fbZ-bf-ChT"/>
                                 </constraints>
                             </view>
                             <view opaque="NO" tag="110" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-aB-TTJ" userLabel="FM Mod Knob" customClass="KnobMedium" customModule="SimpleFM">
@@ -631,6 +660,34 @@
                                     <constraint firstAttribute="width" secondItem="6S4-Ib-GiX" secondAttribute="height" multiplier="1:1" id="oCs-fr-ZlN"/>
                                 </constraints>
                             </view>
+                            <view opaque="NO" tag="123" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkr-4H-RCm" userLabel="Attack Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="609" y="47" width="55" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="ACS-bj-Nsg"/>
+                                    <constraint firstAttribute="width" secondItem="Xkr-4H-RCm" secondAttribute="height" multiplier="21:82" constant="13" id="EQ5-cP-mOE"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" tag="124" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-sl-n6Z" userLabel="Decay Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="699" y="47" width="55" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mJL-sl-n6Z" secondAttribute="height" multiplier="21:82" constant="13" id="7cc-Aw-ExY"/>
+                                    <constraint firstAttribute="height" constant="164" id="hZE-2t-nrw"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" tag="125" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-5N-79u" userLabel="Sustain Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="796" y="47" width="55" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="DAb-WP-vHw"/>
+                                    <constraint firstAttribute="width" secondItem="9LC-5N-79u" secondAttribute="height" multiplier="21:82" constant="13" id="ivx-gN-qBA"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" tag="126" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-ts-PB4" userLabel="Release Slider" customClass="VerticalSlider" customModule="SimpleFM" customModuleProvider="target">
+                                <rect key="frame" x="887" y="47" width="55" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Oo-ts-PB4" secondAttribute="height" multiplier="21:82" constant="13" id="Hlv-UW-GMa"/>
+                                    <constraint firstAttribute="height" constant="164" id="fbZ-bf-ChT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="TDs-z8-FWS" firstAttribute="top" secondItem="tSh-yY-R9z" secondAttribute="bottom" constant="32" id="00d-Cv-5c4"/>
@@ -638,7 +695,7 @@
                             <constraint firstItem="N6q-Wf-c0V" firstAttribute="leading" secondItem="hBI-zT-ah3" secondAttribute="trailing" constant="1" id="0Ua-Gi-B7D"/>
                             <constraint firstItem="dIK-am-emE" firstAttribute="leading" secondItem="7av-Yi-7FC" secondAttribute="trailing" constant="1" id="0Vk-wc-5ei"/>
                             <constraint firstItem="0vc-5Q-ui1" firstAttribute="top" secondItem="hcs-Kz-V6e" secondAttribute="bottom" constant="24" id="0ma-lQ-MuI"/>
-                            <constraint firstItem="9LC-5N-79u" firstAttribute="leading" secondItem="mJL-sl-n6Z" secondAttribute="trailing" constant="55" id="0rZ-s7-itp"/>
+                            <constraint firstItem="9LC-5N-79u" firstAttribute="leading" secondItem="mJL-sl-n6Z" secondAttribute="trailing" constant="42" id="0rZ-s7-itp"/>
                             <constraint firstItem="4Wd-Yb-kaM" firstAttribute="leading" secondItem="N6q-Wf-c0V" secondAttribute="trailing" constant="1" id="1Xs-oP-IVS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vcu-0s-7ib" secondAttribute="bottom" constant="8" id="284-B8-zYT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2ET-ZX-VqT" secondAttribute="bottom" constant="76" id="2R6-te-tHm"/>
@@ -695,7 +752,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Wd-Yb-kaM" secondAttribute="bottom" constant="8" id="TZd-fO-q3r"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Th8-dK-IvW" secondAttribute="bottom" constant="76" id="Tfb-MC-izG"/>
                             <constraint firstItem="XT4-U1-2sc" firstAttribute="leading" secondItem="0VP-B8-S86" secondAttribute="trailing" constant="46" id="TmZ-7f-fKb"/>
-                            <constraint firstItem="9Oo-ts-PB4" firstAttribute="leading" secondItem="9LC-5N-79u" secondAttribute="trailing" constant="49" id="TnO-WM-uKS"/>
+                            <constraint firstItem="9Oo-ts-PB4" firstAttribute="leading" secondItem="9LC-5N-79u" secondAttribute="trailing" constant="36" id="TnO-WM-uKS"/>
                             <constraint firstItem="0vc-5Q-ui1" firstAttribute="leading" secondItem="mVy-ml-PuM" secondAttribute="trailing" constant="20" id="U6P-Zq-m17"/>
                             <constraint firstItem="hBI-zT-ah3" firstAttribute="leading" secondItem="jmA-YG-r4e" secondAttribute="trailing" constant="1" id="Uec-Nj-Bf5"/>
                             <constraint firstItem="0VP-B8-S86" firstAttribute="leading" secondItem="vcu-0s-7ib" secondAttribute="trailing" constant="1" id="Ugl-dC-96r"/>
@@ -708,11 +765,11 @@
                             <constraint firstItem="dIK-am-emE" firstAttribute="leading" secondItem="7av-Yi-7FC" secondAttribute="trailing" constant="1" id="XoX-Az-fR5"/>
                             <constraint firstItem="mVy-ml-PuM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="YBT-YG-hD7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BdZ-3h-Ija" secondAttribute="bottom" constant="8" id="YgM-x6-i5k"/>
-                            <constraint firstItem="mJL-sl-n6Z" firstAttribute="leading" secondItem="Xkr-4H-RCm" secondAttribute="trailing" constant="48" id="Ymn-Rb-mRY"/>
+                            <constraint firstItem="mJL-sl-n6Z" firstAttribute="leading" secondItem="Xkr-4H-RCm" secondAttribute="trailing" constant="35" id="Ymn-Rb-mRY"/>
                             <constraint firstItem="BTp-WI-XqM" firstAttribute="leading" secondItem="BdZ-3h-Ija" secondAttribute="trailing" constant="1" id="YrS-CP-H5E"/>
                             <constraint firstItem="BTp-WI-XqM" firstAttribute="leading" secondItem="CDM-yR-Sxb" secondAttribute="trailing" constant="45" id="YtC-M9-uoF"/>
                             <constraint firstItem="CDM-yR-Sxb" firstAttribute="leading" secondItem="wPw-KX-XdK" secondAttribute="trailing" constant="22" id="Z1m-hf-tAc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Oo-ts-PB4" secondAttribute="trailing" constant="75" id="Zc4-4N-EPr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Oo-ts-PB4" secondAttribute="trailing" constant="62" id="Zc4-4N-EPr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N6q-Wf-c0V" secondAttribute="bottom" constant="8" id="aQr-LR-c3p"/>
                             <constraint firstItem="1uw-hb-lzo" firstAttribute="top" secondItem="9Oo-ts-PB4" secondAttribute="bottom" constant="65" id="b32-Y6-EiV"/>
                             <constraint firstItem="7av-Yi-7FC" firstAttribute="leading" secondItem="Q7Y-UQ-boc" secondAttribute="trailing" constant="1" id="bR0-xc-qmZ"/>
@@ -795,9 +852,26 @@
                         <outlet property="sustainSlider" destination="9LC-5N-79u" id="cq9-lN-iNh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="474"/>
+            <point key="canvasLocation" x="569" y="465"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H2F-N3-lcK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="djF-NV-SkN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a8s-3S-ywp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KRc-dd-h22" kind="relationship" relationship="rootViewController" id="xic-da-Mw1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2G-ss-vKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="-371"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E233A3C11D2EEF02006C4551 /* PresetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233A3C01D2EEF02006C4551 /* PresetCollectionViewController.swift */; };
+		E233A3C31D2EEF5A006C4551 /* PresetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233A3C21D2EEF5A006C4551 /* PresetCollectionViewCell.swift */; };
 		E23ADEF51D19F36500240D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADEF41D19F36500240D79 /* AppDelegate.swift */; };
 		E23ADEF71D19F36500240D79 /* SynthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADEF61D19F36500240D79 /* SynthViewController.swift */; };
 		E23ADEFA1D19F36500240D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23ADEF81D19F36500240D79 /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E233A3C01D2EEF02006C4551 /* PresetCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetCollectionViewController.swift; sourceTree = "<group>"; };
+		E233A3C21D2EEF5A006C4551 /* PresetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetCollectionViewCell.swift; sourceTree = "<group>"; };
 		E23ADEF11D19F36500240D79 /* SimpleFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23ADEF41D19F36500240D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23ADEF61D19F36500240D79 /* SynthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				E23ADEF61D19F36500240D79 /* SynthViewController.swift */,
+				E233A3C01D2EEF02006C4551 /* PresetCollectionViewController.swift */,
+				E233A3C21D2EEF5A006C4551 /* PresetCollectionViewCell.swift */,
 				E23ADFCB1D1F596D00240D79 /* Helpers */,
 			);
 			name = ViewController;
@@ -391,6 +397,7 @@
 				E23ADFDC1D1F5CEF00240D79 /* KnobMedium.swift in Sources */,
 				E23ADFBA1D1DF59C00240D79 /* Conductor.swift in Sources */,
 				E23ADFC81D1E407000240D79 /* MultiDelay.swift in Sources */,
+				E233A3C31D2EEF5A006C4551 /* PresetCollectionViewCell.swift in Sources */,
 				E23ADFEC1D1F5E5400240D79 /* SMBasicSegmentView.swift in Sources */,
 				E23ADFCA1D1F596300240D79 /* SynthVC+Delegates.swift in Sources */,
 				E23ADFC01D1E3C0F00240D79 /* Preset+CoreDataProperties.swift in Sources */,
@@ -399,6 +406,7 @@
 				E23ADFFA1D1F5F3E00240D79 /* VerticalSliderStyles.swift in Sources */,
 				E23ADFCD1D1F59BA00240D79 /* SynthVC+NoteNames.swift in Sources */,
 				E23ADFAB1D1DF40A00240D79 /* Preset.swift in Sources */,
+				E233A3C11D2EEF02006C4551 /* PresetCollectionViewController.swift in Sources */,
 				E23ADFD81D1F5CC100240D79 /* Knob+Touches.swift in Sources */,
 				E23ADFC61D1E3FF600240D79 /* FilterSection.swift in Sources */,
 				E23ADFE51D1F5DA800240D79 /* WaveformSegmentedView+Extensions.swift in Sources */,

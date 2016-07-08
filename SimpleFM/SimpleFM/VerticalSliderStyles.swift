@@ -11,7 +11,7 @@ public class VerticalSliderStyles: NSObject {
 
     //// Drawing Methods
 
-    public class func drawVerticalSlider(controlFrame controlFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 216), knobRect: CGRect = CGRect(x: 0, y: 89, width: 36, height: 32)) {
+    public class func drawVerticalSlider(controlFrame controlFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 216), knobRect: CGRect = CGRect(x: 0, y: 89, width: 40, height: 32)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
@@ -21,7 +21,7 @@ public class VerticalSliderStyles: NSObject {
         let slider_track = UIImage(named: "slider_track")!
 
         //// Background Drawing
-        let backgroundRect = CGRectMake(controlFrame.minX + 2, controlFrame.minY + 10, 38, 144)
+        let backgroundRect = CGRectMake(controlFrame.minX + 5, controlFrame.minY + 10, 38, 144)
         let backgroundPath = UIBezierPath(rect: backgroundRect)
         CGContextSaveGState(context)
         backgroundPath.addClip()
@@ -37,5 +37,4 @@ public class VerticalSliderStyles: NSObject {
         slider_top.drawInRect(CGRectMake(floor(sliderTopRect.minX + 0.5), floor(sliderTopRect.minY + 0.5), slider_top.size.width, slider_top.size.height))
         CGContextRestoreGState(context)
     }
-
 }

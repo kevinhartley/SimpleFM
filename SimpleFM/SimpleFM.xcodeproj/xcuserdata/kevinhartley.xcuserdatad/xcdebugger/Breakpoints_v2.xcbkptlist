@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SimpleFM/SynthViewController.swift"
-            timestampString = "489443196.936221"
+            timestampString = "489618948.381731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "691"
-            endingLineNumber = "691"
+            startingLineNumber = "701"
+            endingLineNumber = "701"
             landmarkName = "sliderValueDidChange(_:tag:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SimpleFM/SynthViewController.swift"
-            timestampString = "489443196.936221"
+            timestampString = "489618948.381731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "695"
-            endingLineNumber = "695"
+            startingLineNumber = "705"
+            endingLineNumber = "705"
             landmarkName = "sliderValueDidChange(_:tag:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SimpleFM/SynthViewController.swift"
-            timestampString = "489443196.936221"
+            timestampString = "489618948.381731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "filterToggled()"
             landmarkType = "5">
          </BreakpointContent>
