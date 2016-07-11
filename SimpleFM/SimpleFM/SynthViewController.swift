@@ -23,7 +23,7 @@ public class SynthViewController: UIViewController {
 //    @IBOutlet weak var osc2DetuneKnob: KnobMedium!
 //    @IBOutlet weak var lfoAmtKnob: KnobMedium!
 //    @IBOutlet weak var lfoRateKnob: KnobMedium!
-//    @IBOutlet weak var crushAmtKnob: KnobMedium!
+//    @IBOutlet weak var crushAmtKnob: KnobMedium!z
     @IBOutlet weak var delayTimeKnob: KnobSmall!
     @IBOutlet weak var delayMixKnob: KnobSmall!
     @IBOutlet weak var reverbAmtKnob: KnobSmall!
@@ -107,6 +107,8 @@ public class SynthViewController: UIViewController {
         
         // Greeting
 //        statusLabel.text = String.randomGreeting()
+        conductor.core.updateWaveform1()
+        conductor.core.updateWaveform2()
         
         
         view.backgroundColor = UIColor(patternImage: UIImage(named:"Synth Background")!)
@@ -129,35 +131,39 @@ public class SynthViewController: UIViewController {
     func setDefaultValues() {
         
         // Set Preset Values
-        conductor.masterVolume.volume = 25.0 // Master Volume
-        conductor.core.offset1 = 6 // VCO1 Semitones
-        conductor.core.offset2 = 6 // VCO2 Semitones
+        conductor.masterVolume.volume = 23.0 // Master Volume
+        conductor.core.offset1 = 0 // VCO1 Semitones
+        conductor.core.offset2 = 3.8 // VCO2 Semitones
         /* conductor.core.detune = 0.0 */ // VCO2 Detune (Hz)
-        conductor.core.vcoBalance = 0.5 // VCO1/VCO2 Mix
-        conductor.core.subOscMix = 0.0 // SubOsc Mix
-        conductor.core.fmOscMix = 0.0 // FM Mix
-        conductor.core.fmMod = 0.0 // FM Modulation Amt
+        conductor.core.vcoBalance = 0.7 // VCO1/VCO2 Mix
+        conductor.core.subOscMix = 2.0 // SubOsc Mix
+        conductor.core.fmOscMix = 1.0 // FM Mix
+        conductor.core.fmMod = 0.7 // FM Modulation Amt
         conductor.core.morph = 0.0 // Morphing between waveforms
         /* conductor.core.noiseMix = 0.0 */ // Noise Mix
         /* conductor.filterSection.lfoAmplitude = 0.0 */ // LFO Amp (Hz)
         /* conductor.filterSection.lfoRate = 1.4 */ // LFO Rate
         /* conductor.filterSection.resonance = 0.5 */ // Filter Q/Rez
-        conductor.multiDelay.time = 0.5 // Delay (seconds)
-        conductor.multiDelay.mix = 0.5 // Dry/Wet
-        conductor.reverb.feedback = 0.88 // Amt
-        conductor.reverbMixer.balance = 0.4 // Dry/Wet
+        conductor.multiDelay.time = 0.6 // Delay (seconds)
+        conductor.multiDelay.mix = 0.7 // Dry/Wet
+        conductor.reverb.feedback = 0.75 // Amt
+        conductor.reverbMixer.balance = 0.5 // Dry/Wet
         conductor.midiBendRange = 2.0 // MIDI bend range in +/- semitones
         
-        cutoffKnob.value = 0.36  // Cutoff Knob Position
-        /* crushAmtKnob.value = 0.0 */ // Crusher Knob Position
+        cutoffKnob.value = 0.92  // Cutoff Knob Position
+//         crushAmtKnob.value = 0.0  // Crusher Knob Position
         
         // ADSR
-        conductor.core.attackDuration = 0.1
-        conductor.core.decayDuration = 0.1
-        conductor.core.sustainLevel = 0.66
-        conductor.core.releaseDuration = 0.5
+        conductor.core.attackDuration = 1.4
+        conductor.core.decayDuration = 0.7
+        conductor.core.sustainLevel = 0.7
+        conductor.core.releaseDuration = 0.6
         
-        // Update Knob & Slider UI Values
+        // Waveforms
+        conductor.core.waveform1 = 3
+        conductor.core.waveform2 = 1
+        
+        // Update Knob, Wave & Slider UI Values
         setupKnobValues()
         setupSliderValues()
         
@@ -169,6 +175,8 @@ public class SynthViewController: UIViewController {
         filterToggled(/*filterToggle*/)
         delayToggled(/*delayToggle*/)
         reverbToggled(/*reverbToggle*/)
+        
+        
     }
     
     func setupKnobValues() {
@@ -574,12 +582,12 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
             
         // VCOs
         case ControlTag.Vco1Semitones.rawValue:
-            let intValue = Int(floor(value))
+            let intValue = Double(floor(value))
 //            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset1 = intValue
             
         case ControlTag.Vco2Semitones.rawValue:
-            let intValue = Int(floor(value))
+            let intValue = Double(floor(value))
 //            statusLabel.text = "Semitones: \(intValue)"
             conductor.core.offset2 = intValue
             
@@ -663,7 +671,7 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
         // Reverb
         case ControlTag.ReverbAmt.rawValue:
             if value == 0.99 {
-                statusLabel.text = "Reverb Size: Grand Canyon!"
+//                statusLabel.text = "Reverb Size: Grand Canyon!"
             } else {
 //                statusLabel.text = "Reverb Size: \(reverbAmtKnob.knobValue.percentageString)"
             }

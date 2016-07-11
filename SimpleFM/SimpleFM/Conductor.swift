@@ -13,7 +13,7 @@ class Conductor: AKMIDIListener {
     static let sharedInstance = Conductor()
     
     var core = CoreInstrument(voiceCount: 5)
-    var bitCrusher: AKBitCrusher
+    var booster: AKStringResonator
     var fatten: Fatten
     var filterSection: FilterSection
     var multiDelay: MultiDelay
@@ -27,10 +27,10 @@ class Conductor: AKMIDIListener {
     
     init() {
         AKSettings.audioInputEnabled = true
-        bitCrusher = AKBitCrusher(core)
-        bitCrusher.stop()
+        booster = AKStringResonator(core)
+        booster.stop()
         
-        filterSection = FilterSection(bitCrusher)
+        filterSection = FilterSection(booster)
         filterSection.output.stop()
         
         fatten = Fatten(filterSection)

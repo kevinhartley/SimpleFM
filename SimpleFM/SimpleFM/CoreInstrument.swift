@@ -47,7 +47,7 @@ class CoreInstrument: AKPolyphonicInstrument {
         }
     }
     
-    var offset1 = 0 {
+    var offset1 = 0.0 {
         didSet {
             for i in 0..<activeVoices.count {
                 let coreVoice = activeVoices[i] as! CoreVoice
@@ -57,7 +57,7 @@ class CoreInstrument: AKPolyphonicInstrument {
         }
     }
     
-    var offset2 = 0 {
+    var offset2 = 0.0 {
         didSet {
             for i in 0..<activeVoices.count {
                 let coreVoice = activeVoices[i] as! CoreVoice

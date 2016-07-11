@@ -43,8 +43,8 @@ extension SynthViewController {
     //*****************************************************************
 
     func createWaveFormSegmentViews() {
-        setupOscSegmentView(44, y: 208.0, width: 145, height: 45.0, tag: ControlTag.Vco1Waveform.rawValue, type: 0)
-        setupOscSegmentView(44, y: 418.0, width: 145, height: 45.0, tag: ControlTag.Vco2Waveform.rawValue, type: 0)
+        setupOscSegmentView(44.5, y: 208.3, width: 145, height: 45.0, tag: ControlTag.Vco1Waveform.rawValue, type: 0)
+        setupOscSegmentView(44.5, y: 416.0, width: 145, height: 45.0, tag: ControlTag.Vco2Waveform.rawValue, type: 0)
 //        setupOscSegmentView(10, y: 377, width: 255, height: 46.0, tag: ControlTag.LfoWaveform.rawValue, type: 1)
     }
 

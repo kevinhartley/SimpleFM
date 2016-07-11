@@ -23,7 +23,7 @@ public class SynthStyleKit: NSObject {
         let knobAngle: CGFloat = -240 * knobValue
 
         //// knob base Drawing
-        let knobBasePath = UIBezierPath(rect: CGRect(x: -5, y: -5, width: 180, height: 180))
+        let knobBasePath = UIBezierPath(rect: CGRect(x: -5, y: -5, width: 210, height: 210))
         CGContextSaveGState(context)
         knobBasePath.addClip()
         knob140_base.drawInRect(CGRectMake(-5, -5, knob140_base.size.width, knob140_base.size.height))
@@ -31,13 +31,13 @@ public class SynthStyleKit: NSObject {
 
         //// Indicator Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 40, 40)
+        CGContextTranslateCTM(context, 47.5, 48)
         CGContextRotateCTM(context, -(knobAngle + 120) * CGFloat(M_PI) / 180)
 
-        let indicatorPath = UIBezierPath(rect: CGRect(x: -45, y: -45, width: 180, height: 180))
+        let indicatorPath = UIBezierPath(rect: CGRect(x: -45, y: -45, width: 210, height: 210))
         CGContextSaveGState(context)
         indicatorPath.addClip()
-        knob140_indicator.drawInRect(CGRectMake(-45, -45, knob140_indicator.size.width, knob140_indicator.size.height))
+        knob140_indicator.drawInRect(CGRectMake(-53, -52, knob140_indicator.size.width, knob140_indicator.size.height))
         CGContextRestoreGState(context)
         
         
@@ -57,21 +57,21 @@ public class SynthStyleKit: NSObject {
         let knobAngle: CGFloat = -240 * knobValue
 
         //// Picture Drawing
-        let picturePath = UIBezierPath(rect: CGRect(x: 10, y: 10, width: 106, height: 106))
+        let picturePath = UIBezierPath(rect: CGRect(x: -30, y: -10, width: 300, height: 300))
         CGContextSaveGState(context)
         picturePath.addClip()
-        knob212_base.drawInRect(CGRectMake(10, 10, knob212_base.size.width, knob212_base.size.height))
+        knob212_base.drawInRect(CGRectMake(-2, 4, knob212_base.size.width, knob212_base.size.height))
         CGContextRestoreGState(context)
 
         //// Picture 2 Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 63, 63)
+        CGContextTranslateCTM(context, 73.6, 79.5)
         CGContextRotateCTM(context, -(knobAngle + 120) * CGFloat(M_PI) / 180)
 
-        let picture2Path = UIBezierPath(rect: CGRect(x: -53, y: -53, width: 106, height: 106))
+        let picture2Path = UIBezierPath(rect: CGRect(x: -75, y: -70, width: 300, height: 300))
         CGContextSaveGState(context)
         picture2Path.addClip()
-        knob212_indicator.drawInRect(CGRectMake(-53, -53, knob212_indicator.size.width, knob212_indicator.size.height))
+        knob212_indicator.drawInRect(CGRectMake(-75.1, -73, knob212_indicator.size.width, knob212_indicator.size.height))
         CGContextRestoreGState(context)
 
         CGContextRestoreGState(context)
@@ -89,7 +89,7 @@ public class SynthStyleKit: NSObject {
         let knobAngle: CGFloat = -240 * knobValue
 
         //// Picture Drawing
-        let picturePath = UIBezierPath(rect: CGRect(x: 5, y: 5, width: 60, height: 60))
+        let picturePath = UIBezierPath(rect: CGRect(x: 5, y: 5, width: 100, height: 100))
         CGContextSaveGState(context)
         picturePath.addClip()
         knob120_base.drawInRect(CGRectMake(5, 5, knob120_base.size.width, knob120_base.size.height))
@@ -97,13 +97,13 @@ public class SynthStyleKit: NSObject {
 
         //// Indicator Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35, 35)
+        CGContextTranslateCTM(context, 40, 40)
         CGContextRotateCTM(context, -(knobAngle + 120) * CGFloat(M_PI) / 180)
 
-        let indicatorPath = UIBezierPath(rect: CGRect(x: -30, y: -30, width: 60, height: 60))
+        let indicatorPath = UIBezierPath(rect: CGRect(x: -30, y: -30, width: 100, height: 100))
         CGContextSaveGState(context)
         indicatorPath.addClip()
-        knob120_indicator.drawInRect(CGRectMake(-30, -30, knob120_indicator.size.width, knob120_indicator.size.height))
+        knob120_indicator.drawInRect(CGRectMake(-35, -35, knob120_indicator.size.width, knob120_indicator.size.height))
         CGContextRestoreGState(context)
 
         CGContextRestoreGState(context)

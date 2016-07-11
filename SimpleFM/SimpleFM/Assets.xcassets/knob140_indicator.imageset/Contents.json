@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Knob_indicator_90.png",
+      "filename" : "Knob_Indicator_M_90W.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Knob_indicator_180.png",
+      "filename" : "Knob_Indicator_210W.png",
       "scale" : "2x"
     },
     {
