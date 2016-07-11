@@ -29,7 +29,7 @@ public class SynthViewController: UIViewController {
     @IBOutlet weak var reverbAmtKnob: KnobSmall!
     @IBOutlet weak var reverbMixKnob: KnobSmall!
     @IBOutlet weak var cutoffKnob: KnobLarge!
-//    @IBOutlet weak var rezKnob: KnobSmall!
+    var rezKnob: KnobSmall!
     @IBOutlet weak var subMixKnob: KnobMedium!
     @IBOutlet weak var fmMixKnob: KnobMedium!
     @IBOutlet weak var fmModKnob: KnobMedium!
@@ -53,7 +53,7 @@ public class SynthViewController: UIViewController {
     
     enum ControlTag: Int {
         case Cutoff = 101
-//        case Rez = 102
+        case Rez = 102
         case Vco1Waveform = 103
         case Vco2Waveform = 104
         case Vco1Semitones = 105
@@ -137,13 +137,14 @@ public class SynthViewController: UIViewController {
         /* conductor.core.detune = 0.0 */ // VCO2 Detune (Hz)
         conductor.core.vcoBalance = 0.7 // VCO1/VCO2 Mix
         conductor.core.subOscMix = 2.0 // SubOsc Mix
-        conductor.core.fmOscMix = 1.0 // FM Mix
-        conductor.core.fmMod = 0.7 // FM Modulation Amt
-        conductor.core.morph = 0.0 // Morphing between waveforms
+        conductor.core.phatOscMix = 0.0
+        conductor.core.fmOscMix = 0.45 // FM Mix
+        conductor.core.fmMod = 9 // FM Modulation Amt
+//        conductor.core.morph = 0.0 // Morphing between waveforms
         /* conductor.core.noiseMix = 0.0 */ // Noise Mix
         /* conductor.filterSection.lfoAmplitude = 0.0 */ // LFO Amp (Hz)
         /* conductor.filterSection.lfoRate = 1.4 */ // LFO Rate
-        /* conductor.filterSection.resonance = 0.5 */ // Filter Q/Rez
+        conductor.filterSection.resonance = 0.5 // Filter Q/Rez
         conductor.multiDelay.time = 0.6 // Delay (seconds)
         conductor.multiDelay.mix = 0.7 // Dry/Wet
         conductor.reverb.feedback = 0.75 // Amt
@@ -157,7 +158,7 @@ public class SynthViewController: UIViewController {
         conductor.core.attackDuration = 1.4
         conductor.core.decayDuration = 0.7
         conductor.core.sustainLevel = 0.7
-        conductor.core.releaseDuration = 0.6
+        conductor.core.releaseDuration = 0.9
         
         // Waveforms
         conductor.core.waveform1 = 3
@@ -332,13 +333,16 @@ public class SynthViewController: UIViewController {
     @IBAction func stereoFattenToggled(sender: UIButton) {
         if sender.selected {
             sender.selected = false
-            
 //            statusLabel.text = "Stereo Fatten Off"
             conductor.fatten.dryWetMix.balance = 0
+            conductor.core.phatOn = false
+            conductor.core.phatOscMix = 0.0
         } else {
             sender.selected = true
 //            statusLabel.text = "Stereo Fatten On"
             conductor.fatten.dryWetMix.balance = 1
+            conductor.core.phatOn = true
+            conductor.core.phatOscMix = 1.3
         }
     }
     
@@ -649,9 +653,9 @@ extension SynthViewController: KnobSmallDelegate, KnobMediumDelegate, KnobLargeD
 //            statusLabel.text = "Cutoff: \(cutOffFrequency.decimalString) Hz"
             conductor.filterSection.cutoffFrequency = cutOffFrequency
             
-//        case ControlTag.Rez.rawValue:
+        case ControlTag.Rez.rawValue:
 //            statusLabel.text = "Rez: \(value.decimalString)"
-//            conductor.filterSection.resonance = value
+            conductor.filterSection.resonance = value
             
         // Crusher
 //        case ControlTag.CrushAmt.rawValue:

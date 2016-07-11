@@ -42,7 +42,7 @@ class CoreInstrument: AKPolyphonicInstrument {
                 coreVoice.vco1.frequency = note.midiNoteToFrequency()
                 let note2 = Double(activeNotes[i] + offset2) + globalbend
                 coreVoice.vco2.frequency = note2.midiNoteToFrequency()
-//                coreVoice.subOsc.frequency = (Double(activeNotes[i] - 12) + globalbend).midiNoteToFrequency()
+                coreVoice.subOsc.frequency = (Double(activeNotes[i] - 12) + globalbend).midiNoteToFrequency()
             }
         }
     }
@@ -67,12 +67,20 @@ class CoreInstrument: AKPolyphonicInstrument {
         }
     }
     
-    
     var subOscMix = 0.0 {
         didSet {
             for voice in voices {
                 let coreVoice = voice as! CoreVoice
                 coreVoice.subOscMixer.volume = subOscMix
+            }
+        }
+    }
+    
+    var phatOscMix = 0.0 {
+        didSet {
+            for voice in voices {
+                let coreVoice = voice as! CoreVoice
+                coreVoice.phatOscMixer.volume = phatOscMix
             }
         }
     }
@@ -200,6 +208,15 @@ class CoreInstrument: AKPolyphonicInstrument {
         }
     }
     
+    var phatOn = false {
+        didSet {
+            for voice in voices {
+                let coreVoice = voice as! CoreVoice
+                coreVoice.phatOscMixer.volume = vco1On ? 1.0 : 0.0
+            }
+        }
+    }
+    
     
     /// Instantiate the Instrument
     ///
@@ -227,6 +244,7 @@ class CoreInstrument: AKPolyphonicInstrument {
         coreVoice.vco1.amplitude   = commonAmplitude
         coreVoice.vco2.amplitude   = commonAmplitude
         coreVoice.subOsc.amplitude = commonAmplitude
+        coreVoice.phatOsc.amplitude = commonAmplitude
         coreVoice.fmOsc.amplitude  = commonAmplitude
 //        coreVoice.noise.amplitude  = commonAmplitude
         
@@ -234,6 +252,7 @@ class CoreInstrument: AKPolyphonicInstrument {
         coreVoice.vco2.frequency = (Double(noteNumber + offset2) + globalbend).midiNoteToFrequency()
         
         coreVoice.subOsc.frequency = (Double(noteNumber - 12) + globalbend).midiNoteToFrequency()
+        coreVoice.phatOsc.frequency = (Double(noteNumber - 24) + globalbend).midiNoteToFrequency()
         coreVoice.fmOsc.baseFrequency = noteNumber.midiNoteToFrequency()
         
         coreVoice.start()

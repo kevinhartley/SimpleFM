@@ -38,8 +38,8 @@ class FilterSection: AKNode {
 //            output.parameters = parameters
 //        }
 //    }
-    
-//    var lfoIndex: Double = 0 {
+//    
+//    var lfoIndex: Double = 10 {
 //        didSet {
 //            parameters[4] = lfoIndex
 //            output.parameters = parameters
@@ -58,7 +58,7 @@ class FilterSection: AKNode {
         
 //        let lfo = AKOperation.morphingOscillator(frequency: oscRate, amplitude: oscAmp, index: oscIndex)
         
-        let moog = AKOperation.input.moogLadderFilter(cutoffFrequency: max(/*lfo + */cutoff, 0), resonance: rez)
+        let moog = AKOperation.input.moogLadderFilter(cutoffFrequency: max(/*lfo +*/ cutoff, 0), resonance: rez)
         
         output = AKOperationEffect(input, operation: moog)
         output.parameters = parameters

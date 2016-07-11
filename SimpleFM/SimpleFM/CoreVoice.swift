@@ -12,6 +12,7 @@ class CoreVoice: AKVoice {
     var vco1: AKMorphingOscillator
     var vco2: AKMorphingOscillator
     var subOsc = AKOscillator()
+    var phatOsc = AKOscillator()
     var fmOsc  = AKFMOscillator()
 //    var noise  = AKWhiteNoise()
     
@@ -19,6 +20,7 @@ class CoreVoice: AKVoice {
     var vco1Mixer: AKMixer
     var vco2Mixer: AKMixer
     var subOscMixer: AKMixer
+    var phatOscMixer: AKMixer
     var fmOscMixer: AKMixer
 //    var noiseMixer: AKMixer
     
@@ -46,17 +48,19 @@ class CoreVoice: AKVoice {
         vco1Mixer   = AKMixer(vco1)
         vco2Mixer   = AKMixer(vco2)
         subOscMixer = AKMixer(subOsc)
+        phatOscMixer = AKMixer(phatOsc)
         fmOscMixer  = AKMixer(fmOsc)
 //        noiseMixer  = AKMixer(noise)
         
         // Default non-VCO's off
         subOscMixer.volume = 0
+        phatOscMixer.volume = 1
         fmOscMixer.volume  = 0
 //        noiseMixer.volume  = 0
         
         vcoBalancer = AKDryWetMixer(vco1Mixer, vco2Mixer, balance: 0.5)
         
-        sourceMixer = AKMixer(vcoBalancer, fmOscMixer, subOscMixer /*noiseMixer*/)
+        sourceMixer = AKMixer(vcoBalancer, fmOscMixer, subOscMixer, phatOscMixer /*noiseMixer*/)
         
         adsr = AKAmplitudeEnvelope(sourceMixer)
         
@@ -81,6 +85,7 @@ class CoreVoice: AKVoice {
         
         // Do not automatically start the VCOs because the logic about that is higher up
         subOsc.start()
+        phatOsc.start()
         fmOsc.start()
 //        noise.start()
         
