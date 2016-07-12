@@ -52,8 +52,8 @@
 		E23ADFF51D1F5EBA00240D79 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF41D1F5EBA00240D79 /* Double+Extensions.swift */; };
 		E23ADFF71D1F5F0C00240D79 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF61D1F5F0C00240D79 /* VerticalSlider.swift */; };
 		E23ADFFA1D1F5F3E00240D79 /* VerticalSliderStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ADFF91D1F5F3E00240D79 /* VerticalSliderStyles.swift */; };
-		E2F0FDD11D27315C00F04297 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCF1D27315100F04297 /* AudioKit.framework */; };
-		E2F0FDD21D27315C00F04297 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0FDCF1D27315100F04297 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2F84BF21D355D52007CD7C1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F84BF01D355D49007CD7C1 /* AudioKit.framework */; };
+		E2F84BF31D355D52007CD7C1 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2F84BF01D355D49007CD7C1 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E2F0FDD21D27315C00F04297 /* AudioKit.framework in Embed Frameworks */,
+				E2F84BF31D355D52007CD7C1 /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +118,7 @@
 		E23ADFF41D1F5EBA00240D79 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		E23ADFF61D1F5F0C00240D79 /* VerticalSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		E23ADFF91D1F5F3E00240D79 /* VerticalSliderStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSliderStyles.swift; sourceTree = "<group>"; };
-		E2F0FDCF1D27315100F04297 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
+		E2F84BF01D355D49007CD7C1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F0FDD11D27315C00F04297 /* AudioKit.framework in Frameworks */,
+				E2F84BF21D355D52007CD7C1 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 		E23ADEE81D19F36500240D79 = {
 			isa = PBXGroup;
 			children = (
-				E2F0FDCF1D27315100F04297 /* AudioKit.framework */,
+				E2F84BF01D355D49007CD7C1 /* AudioKit.framework */,
 				E23ADEF31D19F36500240D79 /* SimpleFM */,
 				E23ADEF21D19F36500240D79 /* Products */,
 			);
@@ -318,6 +318,7 @@
 				E23ADEEE1D19F36500240D79 /* Frameworks */,
 				E23ADEEF1D19F36500240D79 /* Resources */,
 				E2487BB01D22DA0C00018399 /* Embed Frameworks */,
+				E2F84BEB1D3556FB007CD7C1 /* AudioKit fix-framework */,
 			);
 			buildRules = (
 			);
@@ -374,6 +375,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2F84BEB1D3556FB007CD7C1 /* AudioKit fix-framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "AudioKit fix-framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/AudioKit.framework/fix-framework.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E23ADEED1D19F36500240D79 /* Sources */ = {
@@ -468,6 +486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -514,6 +533,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -541,7 +561,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleFM",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SimpleFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -560,7 +579,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleFM",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SimpleFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
